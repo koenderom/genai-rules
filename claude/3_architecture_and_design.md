@@ -1,0 +1,53 @@
+# 3. Architecture and design
+
+How the solution is structured, decided before it's built.
+
+## Goals, in order of priority
+
+When two goals pull in different directions, the higher one wins.
+
+1. **Correct and safe:** the software reliably and consistently does what it's meant to
+   do, and fails visibly when it can't.
+2. **Maintainable and extensible:** a change touches one place and can't quietly break
+   another.
+3. **Readable and reviewable** by a human who doesn't know it yet.
+
+## Rules
+
+1. **Don't reinvent the wheel.** Before designing a component, look for the mature,
+   existing solution: the standard library, a well-established package, a standard tool
+   or practice. Minimize the code written for the project itself.
+2. **Simplicity:** the simplest design that does the job.
+   - Build only what is needed now, not for an imagined future need.
+   - Abstract a pattern once it has appeared three times, not at the first repetition.
+   - Make it right and clear first; make it fast only where measurements show the need.
+3. **Consistency:** one design approach throughout the project; a variation needs a
+   stated reason. The same kind of part has the same structure.
+4. **General mechanisms over special cases:** a configurable scale rather than a switch
+   for one situation. Prefer the general solution whenever it is as clear as the specific
+   one.
+5. **The SOLID principles:**
+   - **Single responsibility:** each module and function has one reason to change; its
+     name says which.
+   - **Open-closed:** adding a variant adds code; it doesn't change existing code.
+   - **Liskov substitution:** an implementation can stand in wherever its interface is
+     expected.
+   - **Interface segregation:** no part depends on methods it doesn't use.
+   - **Dependency inversion:** a part that talks to the outside world receives its
+     client; it doesn't create a global one.
+6. **High cohesion, low coupling, locality of change:** what belongs together sits
+   together; parts depend on each other as little as possible, and only through what
+   they're given; one change in behaviour means a change in one place.
+7. **Organize by subject, not by processing stage:** everything about one subject (its
+   checks, its calculation) sits together.
+8. **Keep structure; don't flatten it:** pass the whole object, not a string glued
+   together from its parts. A decision that may grow smarter later is a function of its
+   own, taking the whole object.
+9. **Specifics live in configuration, not in the code:** personal values, preferences
+   and thresholds are configured; the code stays general.
+10. **Configuration is checked when it's loaded:**
+    - a mistake stops the program at the start, with a message saying what to fix;
+    - where the intent is obvious, the program fixes it and warns, instead of making the
+      user do the work;
+    - settings are grouped by their effect, with the effect stated at the top of each
+      group.
