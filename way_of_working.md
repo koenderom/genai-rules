@@ -29,6 +29,19 @@ stages, in this order; each stage has its own rules:
 7. **Rules stay project-agnostic here.** A rule that holds for one project only goes into
    that project's own documents.
 
+## The stage files, loaded with this one
+
+An assistant loads only the files it's pointed at; these lines make it load the stage
+files together with this one.
+
+@1_requirements.md
+@2_planning_and_tracking.md
+@3_architecture_and_design.md
+@4_implementation.md
+@5_review_and_testing.md
+@6_deployment_and_documentation.md
+@7_maintenance.md
+
 ## Still to discuss
 
 - Software craftsmanship principles not yet decided: composition over inheritance; the

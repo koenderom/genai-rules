@@ -3,8 +3,12 @@
 Project-agnostic rules for how an AI assistant and a project's owner build software
 together, from requirements to maintenance.
 
-- One folder per assistant: [`claude/`](claude/) for Claude. Other assistants can get
-  their own folder next to it.
-- **Use in a project:** add this repository as a git submodule (e.g. at `.ai-rules/`), and
-  point the project's own assistant instructions at it. For Claude, the project's
-  `CLAUDE.md` imports the entry file with a line `@.ai-rules/claude/way_of_working.md`.
+- **The rules** are in this folder: [`way_of_working.md`](way_of_working.md) connects
+  the seven stage files and loads them.
+- **One folder per assistant** holds only what that assistant needs on top: for Claude,
+  [`claude/CLAUDE.md`](claude/CLAUDE.md), which loads the general rules.
+- **Use in a project:** add this repository as a git submodule (e.g. at `.ai-rules/`).
+  For Claude, the project's own `CLAUDE.md` gets one line: `@.ai-rules/claude/CLAUDE.md`.
+- **Size:** everything is loaded into every session (about 300 lines). Claude Code's
+  guidance is to keep instructions under about 200 lines per file; if adherence drops,
+  rules that matter for some files only can move to path-scoped rules.
