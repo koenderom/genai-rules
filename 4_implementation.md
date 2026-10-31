@@ -48,31 +48,35 @@ too, at the level of each function.
 
 ## Functions and data
 
-17. **No functions that work only through side effects:** a function returns its result;
+17. **A function is used correctly at first sight:** its name, parameters and return
+    value say what it does, so the obvious call is the right one. No call that only
+    works when the caller knows how the function is built inside, or in which order
+    hidden steps must happen.
+18. **No functions that work only through side effects:** a function returns its result;
     when changing something is its purpose, its name says so.
-18. **Functions with a similar role have the same signature:** same parameters, same
+19. **Functions with a similar role have the same signature:** same parameters, same
     order.
-19. **Normalize once, at the edge, and keep only the normalized form** (clean or
+20. **Normalize once, at the edge, and keep only the normalized form** (clean or
     lowercase the input where it's read, not at every use).
-20. **No unexplained numbers:** a number that shapes a result is a named constant at the
+21. **No unexplained numbers:** a number that shapes a result is a named constant at the
     top of the file, with where its value comes from; values that depend on each other
     are derived, not set separately.
-21. **General functionality is kept apart from user-specific settings:** the code never
+22. **General functionality is kept apart from user-specific settings:** the code never
     hard-codes anything specific to one user; that goes in configuration files, which
     may be kept private. Examples and tests use invented data.
 
 ## Errors
 
-22. **Catch specific errors, never all of them;** when bad input is tolerated, log a
+23. **Catch specific errors, never all of them;** when bad input is tolerated, log a
     warning, so nothing disappears silently.
-23. **For compiled code, warnings are errors:** the build treats every compiler warning as
+24. **For compiled code, warnings are errors:** the build treats every compiler warning as
     an error, so none is left standing.
 
 ## Changes and tests
 
-24. **One subject per change, in small steps.** A change that needs another one merged
+25. **One subject per change, in small steps.** A change that needs another one merged
     first says so in its title ("merge after ...").
-25. **Code and its tests are written together.** Untested code doesn't exist: it gets
+26. **Code and its tests are written together.** Untested code doesn't exist: it gets
     tested (code that talks to an outside system: at least one real run) or removed.
-26. **One-off work isn't kept:** a data migration or repair runs once, as a script outside
+27. **One-off work isn't kept:** a data migration or repair runs once, as a script outside
     the repository; its code and tests don't stay.

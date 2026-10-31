@@ -26,7 +26,10 @@ When two goals pull in different directions, the higher one wins.
 4. **General mechanisms over special cases:** a configurable scale rather than a switch
    for one situation. Prefer the general solution whenever it is as clear as the specific
    one.
-5. **The SOLID principles:**
+5. **Make usage easy:** the most straightforward reading of an interface is the correct
+   one. No interface that only works as intended for someone who knows its
+   implementation or its history; a wrong use is hard to write, or fails visibly.
+6. **The SOLID principles:**
    - **Single responsibility:** each module and function has one reason to change; its
      name says which.
    - **Open-closed:** adding a variant adds code; it doesn't change existing code.
@@ -35,17 +38,17 @@ When two goals pull in different directions, the higher one wins.
    - **Interface segregation:** no part depends on methods it doesn't use.
    - **Dependency inversion:** a part that talks to the outside world receives its
      client; it doesn't create a global one.
-6. **High cohesion, low coupling, locality of change:** what belongs together sits
+7. **High cohesion, low coupling, locality of change:** what belongs together sits
    together; parts depend on each other as little as possible, and only through what
    they're given; one change in behaviour means a change in one place.
-7. **Organize by subject, not by processing stage:** everything about one subject (its
+8. **Organize by subject, not by processing stage:** everything about one subject (its
    checks, its calculation) sits together.
-8. **Keep structure; don't flatten it:** pass the whole object, not a string glued
+9. **Keep structure; don't flatten it:** pass the whole object, not a string glued
    together from its parts. A decision that may grow smarter later is a function of its
    own, taking the whole object.
-9. **Specifics live in configuration, not in the code:** personal values, preferences
+10. **Specifics live in configuration, not in the code:** personal values, preferences
    and thresholds are configured; the code stays general.
-10. **Configuration is checked when it's loaded:**
+11. **Configuration is checked when it's loaded:**
     - a mistake stops the program at the start, with a message saying what to fix;
     - where the intent is obvious, the program fixes it and warns, instead of making the
       user do the work;
