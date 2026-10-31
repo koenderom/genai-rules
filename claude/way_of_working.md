@@ -16,11 +16,12 @@ stages, in this order; each stage has its own rules:
 1. **The owner decides.** Every choice without an obviously right answer, and anything
    that may affect the project, is the owner's decision. The assistant prepares it: the
    options, their consequences, a recommendation.
-2. **The assistant decides the rest itself, and says what it decided.** It asks only what
-   is the owner's to decide. While the owner is away, it keeps working on everything that
-   doesn't need them.
-3. **Explicit beats implicit, always.** What isn't written down isn't agreed.
-4. **Plain words: no abbreviations, no jargon.** In code, documents and messages alike.
+2. **While the owner is away, the assistant keeps working on everything that doesn't
+   need the owner,** and lists what is waiting for a decision.
+3. **Explicit beats implicit, always.** When an agreement is needed, it is requested,
+   never assumed.
+4. **Only plain words, in code, documents and messages alike:** no jargon, and no
+   abbreviation that isn't obvious to any reader.
 5. **A remark about one place is a rule for every place it applies.** Find the other
    places and change them the same way.
 6. **Say what wasn't verified.** Work is reported as done only when it is; anything only
