@@ -65,12 +65,14 @@ too, at the level of each function.
 
 22. **Catch specific errors, never all of them;** when bad input is tolerated, log a
     warning, so nothing disappears silently.
+23. **For compiled code, warnings are errors:** the build treats every compiler warning as
+    an error, so none is left standing.
 
 ## Changes and tests
 
-23. **One subject per change, in small steps.** A change that needs another one merged
+24. **One subject per change, in small steps.** A change that needs another one merged
     first says so in its title ("merge after ...").
-24. **Code and its tests are written together.** Untested code doesn't exist: it gets
+25. **Code and its tests are written together.** Untested code doesn't exist: it gets
     tested (code that talks to an outside system: at least one real run) or removed.
-25. **One-off work isn't kept:** a data migration or repair runs once, as a script outside
+26. **One-off work isn't kept:** a data migration or repair runs once, as a script outside
     the repository; its code and tests don't stay.

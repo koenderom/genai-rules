@@ -22,6 +22,9 @@ How every change is checked before it counts as done.
    comments, simplicity, consistency with the rest of the code.
 5. **Run all automatic checks** (formatting, linting, type checking, dead-code search,
    tests): every one passes, with no warnings left.
+   - **Coding style is checked by tools, not by eye:** the language's standard formatter
+     and linters (in Python, e.g. ruff), configured in the project and run on every
+     change. The reviewer's attention goes to what tools can't judge.
 6. **Run the review skills on the changed files** ([skills](claude/skills.md)); fix each
    finding, or say in the description why it stays.
 7. **Look for the same problem elsewhere** and fix it in the same way.
