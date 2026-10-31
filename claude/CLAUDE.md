@@ -5,6 +5,7 @@ loads only `CLAUDE.md`, `AGENTS.md` and `.claude/rules/` files by itself; this f
 it at the general rules one folder up.
 
 @../way_of_working.md
+@skills.md
 
 ## Claude-specific rules
 
