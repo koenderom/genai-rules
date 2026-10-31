@@ -17,19 +17,21 @@ When two goals pull in different directions, the higher one wins.
 1. **Don't reinvent the wheel.** Before designing a component, look for the mature,
    existing solution: the standard library, a well-established package, a standard tool
    or practice. Minimize the code written for the project itself.
-2. **Simplicity:** the simplest design that does the job.
+2. **Use established design patterns where they fit:** while designing, review the known
+   patterns (factory, strategy, observer, ...) before inventing a structure.
+3. **Simplicity:** the simplest design that does the job.
    - Build only what is needed now, not for an imagined future need.
    - Abstract a pattern once it has appeared three times, not at the first repetition.
    - Make it right and clear first; make it fast only where measurements show the need.
-3. **Consistency:** one design approach throughout the project; a variation needs a
+4. **Consistency:** one design approach throughout the project; a variation needs a
    stated reason. The same kind of part has the same structure.
-4. **General mechanisms over special cases:** a configurable scale rather than a switch
+5. **General mechanisms over special cases:** a configurable scale rather than a switch
    for one situation. Prefer the general solution whenever it is as clear as the specific
    one.
-5. **Make usage easy:** the most straightforward reading of an interface is the correct
+6. **Make usage easy:** the most straightforward reading of an interface is the correct
    one. No interface that only works as intended for someone who knows its
    implementation or its history; a wrong use is hard to write, or fails visibly.
-6. **The SOLID principles:**
+7. **The SOLID principles:**
    - **Single responsibility:** each module and function has one reason to change; its
      name says which.
    - **Open-closed:** adding a variant adds code; it doesn't change existing code.
@@ -38,17 +40,17 @@ When two goals pull in different directions, the higher one wins.
    - **Interface segregation:** no part depends on methods it doesn't use.
    - **Dependency inversion:** a part that talks to the outside world receives its
      client; it doesn't create a global one.
-7. **High cohesion, low coupling, locality of change:** what belongs together sits
+8. **High cohesion, low coupling, locality of change:** what belongs together sits
    together; parts depend on each other as little as possible, and only through what
    they're given; one change in behaviour means a change in one place.
-8. **Organize by subject, not by processing stage:** everything about one subject (its
+9. **Organize by subject, not by processing stage:** everything about one subject (its
    checks, its calculation) sits together.
-9. **Keep structure; don't flatten it:** pass the whole object, not a string glued
+10. **Keep structure; don't flatten it:** pass the whole object, not a string glued
    together from its parts. A decision that may grow smarter later is a function of its
    own, taking the whole object.
-10. **Specifics live in configuration, not in the code:** personal values, preferences
+11. **Specifics live in configuration, not in the code:** personal values, preferences
    and thresholds are configured; the code stays general.
-11. **Configuration is checked when it's loaded:**
+12. **Configuration is checked when it's loaded:**
     - a mistake stops the program at the start, with a message saying what to fix;
     - where the intent is obvious, the program fixes it and warns, instead of making the
       user do the work;

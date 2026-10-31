@@ -56,27 +56,29 @@ too, at the level of each function.
     when changing something is its purpose, its name says so.
 19. **Functions with a similar role have the same signature:** same parameters, same
     order.
-20. **Normalize once, at the edge, and keep only the normalized form** (clean or
+20. **A helper used in one place sits next to that place,** or as close to it as the
+    language allows.
+21. **Normalize once, at the edge, and keep only the normalized form** (clean or
     lowercase the input where it's read, not at every use).
-21. **No unexplained numbers:** a number that shapes a result is a named constant at the
+22. **No unexplained numbers:** a number that shapes a result is a named constant at the
     top of the file, with where its value comes from; values that depend on each other
     are derived, not set separately.
-22. **General functionality is kept apart from user-specific settings:** the code never
+23. **General functionality is kept apart from user-specific settings:** the code never
     hard-codes anything specific to one user; that goes in configuration files, which
     may be kept private. Examples and tests use invented data.
 
 ## Errors
 
-23. **Catch specific errors, never all of them;** when bad input is tolerated, log a
+24. **Catch specific errors, never all of them;** when bad input is tolerated, log a
     warning, so nothing disappears silently.
-24. **For compiled code, warnings are errors:** the build treats every compiler warning as
+25. **For compiled code, warnings are errors:** the build treats every compiler warning as
     an error, so none is left standing.
 
 ## Changes and tests
 
-25. **One subject per change, in small steps.** A change that needs another one merged
+26. **One subject per change, in small steps.** A change that needs another one merged
     first says so in its title ("merge after ...").
-26. **Code and its tests are written together.** Untested code doesn't exist: it gets
+27. **Code and its tests are written together.** Untested code doesn't exist: it gets
     tested (code that talks to an outside system: at least one real run) or removed.
-27. **One-off work isn't kept:** a data migration or repair runs once, as a script outside
+28. **One-off work isn't kept:** a data migration or repair runs once, as a script outside
     the repository; its code and tests don't stay.
