@@ -28,6 +28,12 @@ stages, in this order; each stage has its own rules:
    partly checked is named as such.
 7. **Rules stay project-agnostic here.** A rule that holds for one project only goes into
    that project's own documents.
+8. **Keep the working context small, to save tokens:** compress it regularly, or start a
+   new conversation when a task is done.
+   - Always under the owner's control: proposed, never done without telling the owner.
+     Consecutive tasks may share context that is still needed.
+   - Before a new context starts, the relevant context and the status go into a written
+     file, so the work can be picked up from there.
 
 ## The stage files, loaded with this one
 
