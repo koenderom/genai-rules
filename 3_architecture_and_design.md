@@ -56,3 +56,10 @@ When two goals pull in different directions, the higher one wins.
       user do the work;
     - settings are grouped by their effect, with the effect stated at the top of each
       group.
+13. **Store each fact once (database normalization):** no copy of the same data in a second
+    place, such as table columns next to a JSON copy of the same record, or a full copy of
+    a record for each result computed from it.
+    - Point to the original instead: e.g. a score row holding the posting's key, the
+      scenario and the score.
+    - Copies drift apart: a repair fixes one and not the other.
+    - A copy only for a measured reason (speed), stated where it's made.
