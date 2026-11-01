@@ -58,6 +58,10 @@ too, at the level of each function.
     when changing something is its purpose, its name says so.
 19. **Functions with a similar role have the same signature:** same parameters, same
     order.
+    - Likewise, **the same operation is written the same way everywhere:** one helper or
+      one idiom per operation (e.g. splitting a comma-separated text into its parts), so
+      a reader recognises it and a fix lands everywhere. The implementation side of the
+      design rule on consistency.
 20. **A helper used in one place sits next to that place,** or as close to it as the
     language allows.
 21. **Normalize once, at the edge, and keep only the normalized form** (clean or
