@@ -34,7 +34,8 @@ too, at the level of each function.
 
 11. **Comment only where it adds something: the intent and the algorithm, not the
     mechanics.** Never rephrase what the code says clearly. What a caller needs to know
-    is stated: preconditions, the result when it fails, side effects, assumptions.
+    is stated: preconditions, the result when it fails, side effects. An assumption is
+    an unwritten precondition: write it down as one.
 12. **Every file starts with its purpose.** No workflow, phase or history information in
     source files.
 13. **Written for a human reader who doesn't know the code yet:** define a term before
