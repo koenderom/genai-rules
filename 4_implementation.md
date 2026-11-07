@@ -59,9 +59,12 @@ too, at the level of each function.
 19. **Functions with a similar role have the same signature:** same parameters, same
     order.
 20. **No duplicated code: each operation is written once, and reused wherever it's
-    needed.** Code that two places share becomes one function both call (e.g. splitting
-    a comma-separated text into its parts), so a fix lands everywhere and a reader
-    recognises the operation by its name.
+    needed,** so a fix lands everywhere and a reader recognises the operation by its name.
+    No duplication takes priority over other rules.
+    - **A verbatim copy** (about five lines or more) becomes one function at its first
+      copy (e.g. splitting a comma-separated text into its parts).
+    - **A recurring structure** that isn't a verbatim copy (the same shape of code, with
+      different details) gets a generic implementation from its third appearance on.
 21. **A helper used in one place sits next to that place,** or as close to it as the
     language allows.
 22. **Normalize once, at the edge, and keep only the normalized form** (clean or

@@ -21,7 +21,9 @@ When two goals pull in different directions, the higher one wins.
    patterns (factory, strategy, observer, ...) before inventing a structure.
 3. **Simplicity:** the simplest design that does the job.
    - Build only what is needed now, not for an imagined future need.
-   - Abstract a pattern once it has appeared three times, not at the first repetition.
+   - Abstract a recurring structure once it has appeared three times, not at the first
+     repetition. A verbatim copy of code is removed at once (implementation rule on
+     duplicated code).
    - Make it right and clear first; make it fast only where measurements show the need.
 4. **Consistency:** one design approach throughout the project; a variation needs a
    stated reason. The same kind of part has the same structure.
