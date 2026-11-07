@@ -34,12 +34,17 @@ When two goals pull in different directions, the higher one wins.
    one. No interface that only works as intended for someone who knows its
    implementation or its history; a wrong use is hard to write, or fails visibly.
 7. **The SOLID principles:**
-   - **Single responsibility:** each module and function has one reason to change; its
-     name says which.
+   - **Single responsibility:** each part (module, class, function, file, configuration
+     section) has one reason to change; its name says which.
    - **Open-closed:** adding a variant adds code; it doesn't change existing code.
    - **Liskov substitution:** an implementation can stand in wherever its interface is
-     expected.
-   - **Interface segregation:** no part depends on methods it doesn't use.
+     expected, in behaviour, not only in signature: it asks no more of its caller than
+     the interface does, and promises no less (e.g. a subclass doesn't refuse an input
+     its base class accepts, nor return `None` where the base class always returns a
+     value).
+   - **Interface segregation:** no part depends on methods or parameters it doesn't use.
+     It outweighs uniform signatures: several small interfaces rather than one signature
+     with parameters some implementations ignore.
    - **Dependency inversion:** a part that talks to the outside world receives its
      client; it doesn't create a global one.
 8. **High cohesion, low coupling, locality of change:** what belongs together sits
@@ -65,3 +70,24 @@ When two goals pull in different directions, the higher one wins.
       scenario and the score.
     - Copies drift apart: a repair fixes one and not the other.
     - A copy only for a measured reason (speed), stated where it's made.
+14. **Composition over inheritance:** build behaviour by combining small objects, not by
+    deep class hierarchies. Inherit only for a true "is a" relation; a shared helper is
+    a function or an object passed in, not a base class.
+15. **Law of Demeter ("talk to friends, not strangers"):** a part uses what it was given,
+    not the inside of what that holds. `order.total()`, not
+    `order.customer.account.balance`: a chain of dots ties the caller to a structure it
+    shouldn't know.
+16. **Functional core, imperative shell:** decisions and calculations are pure functions
+    (same input, same output, nothing changed elsewhere); the few parts that read, write
+    or call the outside world sit at the edge and stay thin. The core is then testable
+    without mocks.
+17. **Make illegal states unrepresentable ("parse, don't validate"):** turn outside data
+    into precise types once, where it enters; inside, a value that exists is valid: a
+    status as one of its few allowed values (an enumeration), not any text; an email
+    address as its own type, not a string checked again at every use.
+18. **Robustness principle (Postel's law), for input from outside:** be liberal in what you
+    accept from websites, feeds, files and users, conservative in what you produce.
+    Tolerated bad input is logged, never silently fixed or dropped.
+19. **Idempotence:** running the same operation twice gives the same result as once. A
+    repeated run updates instead of duplicating, sends a notification once, and can be
+    restarted safely after a failure partway.

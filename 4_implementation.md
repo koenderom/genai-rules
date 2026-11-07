@@ -10,84 +10,98 @@ too, at the level of each function.
 2. **Simplicity beats cleverness:** the version a reader follows at first sight wins, even
    if it's longer. A clever construction needs a reason the reader can check, stated next
    to it.
-3. **No code that isn't needed now:** no options, parameters or abstractions nobody asked
+3. **Explicit is better than implicit** (the Zen of Python): what code depends on and
+   what it does shows where it's used: values are passed, not picked up from global
+   state; behaviour is stated, not left to a default the reader must know. This rule
+   itself is an example: written out, rather than assumed from "keep it clear".
+4. **No code that isn't needed now:** no options, parameters or abstractions nobody asked
    for.
-4. **Write the language's idioms:** code reads the way experienced users of the language
+5. **Write the language's idioms:** code reads the way experienced users of the language
    write it (in Python: "pythonic" code).
 
 ## Names
 
-5. **Plain words of the domain; no jargon, no abbreviations, no catch-all words** such as
+6. **Plain words of the domain; no jargon, no abbreviations, no catch-all words** such as
    manager, data, info, helper, process, registry.
-6. **One concept, one name, everywhere:** code, configuration keys, documents, tests,
+7. **One concept, one name, everywhere:** code, configuration keys, documents, tests,
    messages. One word per concept, one concept per word.
-7. **A name says what the value is, including its criterion:** "highest score first",
+8. **A name says what the value is, including its criterion:** "highest score first",
    not "best first".
-8. **Names follow the language's usual hints,** part of its idioms (in Python: `is_` for
+9. **Names follow the language's usual hints,** part of its idioms (in Python: `is_` for
    a yes/no answer, `iter_` for an iterator, `to_` for a conversion).
-9. **A name never disagrees with what it holds, and doesn't encode the type** (no `_list`
+10. **A name never disagrees with what it holds, and doesn't encode the type** (no `_list`
    on something that may become a set), unless that is common practice in the language.
-10. **A file is named after what it holds; a name carries no history** (no `_new`,
+11. **A file is named after what it holds; a name carries no history** (no `_new`,
     `_clean`, `_v2`).
 
 ## Comments
 
-11. **Comment only where it adds something: the intent and the algorithm, not the
+12. **Comment only where it adds something: the intent and the algorithm, not the
     mechanics.** Never rephrase what the code says clearly. What a caller needs to know
     is stated: preconditions, the result when it fails, side effects. An assumption is
     an unwritten precondition: write it down as one.
-12. **Every file starts with its purpose.** No workflow, phase or history information in
+13. **Every file starts with its purpose.** No workflow, phase or history information in
     source files.
-13. **Written for a human reader who doesn't know the code yet:** define a term before
+14. **Written for a human reader who doesn't know the code yet:** define a term before
     using it; explain every non-obvious construct where it appears (a regular expression
     with an example of what it matches, an operator with a special meaning, a formula's
     closed form).
-14. **A comment never suggests behaviour the code doesn't have.**
-15. **Each explanation lives once, where its reader looks** (a setting is explained in
+15. **A comment never suggests behaviour the code doesn't have.**
+16. **Each explanation lives once, where its reader looks** (a setting is explained in
     the configuration file, not again in the code).
-16. **Structured for readability:** concise, to the point and precise; bullets over
+17. **Structured for readability:** concise, to the point and precise; bullets over
     prose, one idea per bullet.
 
 ## Functions and data
 
-17. **A function is used correctly at first sight:** its name, parameters and return
-    value say what it does, so the obvious call is the right one. No call that only
-    works when the caller knows how the function is built inside, or in which order
-    hidden steps must happen.
-18. **No functions that work only through side effects:** a function returns its result;
-    when changing something is its purpose, its name says so.
-19. **Functions with a similar role have the same signature:** same parameters, same
-    order.
-20. **No duplicated code: each operation is written once, and reused wherever it's
+18. **A function is used correctly at first sight (the principle of least astonishment:
+    code does what its name and shape suggest):** its name, parameters and return value
+    say what it does, so the obvious call is the right one. No call that only works when
+    the caller knows how the function is built inside, or in which order hidden steps
+    must happen.
+19. **No functions that work only through side effects; a function either answers or acts
+    (command-query separation):** a question returns its answer and changes nothing; a
+    command changes something and its name says so. An exception (e.g. "pop": remove and
+    return) is named so the effect is visible at the call site.
+20. **Functions with a similar role have the same signature:** same parameters, same
+    order; but never parameters a function doesn't use (interface segregation wins,
+    design rule 7).
+21. **One level of abstraction per function:** its lines are all at the same level, so a
+    top-level function reads like a summary, and the details sit in the functions it
+    calls.
+22. **No duplicated code: each operation is written once, and reused wherever it's
     needed,** so a fix lands everywhere and a reader recognises the operation by its name.
     No duplication takes priority over other rules.
     - **A verbatim copy** (about five lines or more) becomes one function at its first
       copy (e.g. splitting a comma-separated text into its parts).
     - **A recurring structure** that isn't a verbatim copy (the same shape of code, with
       different details) gets a generic implementation from its third appearance on.
-21. **A helper used in one place sits next to that place,** or as close to it as the
+23. **A helper used in one place sits next to that place,** or as close to it as the
     language allows.
-22. **Normalize once, at the edge, and keep only the normalized form** (clean or
+24. **Normalize once, at the edge, and keep only the normalized form** (clean or
     lowercase the input where it's read, not at every use).
-23. **No unexplained numbers:** a number that shapes a result is a named constant at the
+25. **No unexplained numbers:** a number that shapes a result is a named constant at the
     top of the file, with where its value comes from; values that depend on each other
     are derived, not set separately.
-24. **General functionality is kept apart from user-specific settings:** the code never
+26. **General functionality is kept apart from user-specific settings:** the code never
     hard-codes anything specific to one user; that goes in configuration files, which
     may be kept private. Examples and tests use invented data.
 
 ## Errors
 
-25. **Catch specific errors, never all of them;** when bad input is tolerated, log a
+27. **Fail fast:** report a problem where it happens, as early as possible, instead of
+    continuing with bad data: a broken configuration stops the program before it starts
+    working; an impossible value raises where it's found, not three calls later.
+28. **Catch specific errors, never all of them;** when bad input is tolerated, log a
     warning, so nothing disappears silently.
-26. **For compiled code, warnings are errors:** the build treats every compiler warning as
+29. **For compiled code, warnings are errors:** the build treats every compiler warning as
     an error, so none is left standing.
 
 ## Changes and tests
 
-27. **One subject per change, in small steps.** A change that needs another one merged
+30. **One subject per change, in small steps.** A change that needs another one merged
     first says so in its title ("merge after ...").
-28. **Code and its tests are written together.** Untested code doesn't exist: it gets
+31. **Code and its tests are written together.** Untested code doesn't exist: it gets
     tested (code that talks to an outside system: at least one real run) or removed.
-29. **One-off work isn't kept:** a data migration or repair runs once, as a script outside
+32. **One-off work isn't kept:** a data migration or repair runs once, as a script outside
     the repository; its code and tests don't stay.
