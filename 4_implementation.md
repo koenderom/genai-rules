@@ -58,33 +58,33 @@ too, at the level of each function.
     when changing something is its purpose, its name says so.
 19. **Functions with a similar role have the same signature:** same parameters, same
     order.
-    - Likewise, **the same operation is written the same way everywhere:** one helper or
-      one idiom per operation (e.g. splitting a comma-separated text into its parts), so
-      a reader recognises it and a fix lands everywhere. The implementation side of the
-      design rule on consistency.
-20. **A helper used in one place sits next to that place,** or as close to it as the
+20. **No duplicated code: each operation is written once, and reused wherever it's
+    needed.** Code that two places share becomes one function both call (e.g. splitting
+    a comma-separated text into its parts), so a fix lands everywhere and a reader
+    recognises the operation by its name.
+21. **A helper used in one place sits next to that place,** or as close to it as the
     language allows.
-21. **Normalize once, at the edge, and keep only the normalized form** (clean or
+22. **Normalize once, at the edge, and keep only the normalized form** (clean or
     lowercase the input where it's read, not at every use).
-22. **No unexplained numbers:** a number that shapes a result is a named constant at the
+23. **No unexplained numbers:** a number that shapes a result is a named constant at the
     top of the file, with where its value comes from; values that depend on each other
     are derived, not set separately.
-23. **General functionality is kept apart from user-specific settings:** the code never
+24. **General functionality is kept apart from user-specific settings:** the code never
     hard-codes anything specific to one user; that goes in configuration files, which
     may be kept private. Examples and tests use invented data.
 
 ## Errors
 
-24. **Catch specific errors, never all of them;** when bad input is tolerated, log a
+25. **Catch specific errors, never all of them;** when bad input is tolerated, log a
     warning, so nothing disappears silently.
-25. **For compiled code, warnings are errors:** the build treats every compiler warning as
+26. **For compiled code, warnings are errors:** the build treats every compiler warning as
     an error, so none is left standing.
 
 ## Changes and tests
 
-26. **One subject per change, in small steps.** A change that needs another one merged
+27. **One subject per change, in small steps.** A change that needs another one merged
     first says so in its title ("merge after ...").
-27. **Code and its tests are written together.** Untested code doesn't exist: it gets
+28. **Code and its tests are written together.** Untested code doesn't exist: it gets
     tested (code that talks to an outside system: at least one real run) or removed.
-28. **One-off work isn't kept:** a data migration or repair runs once, as a script outside
+29. **One-off work isn't kept:** a data migration or repair runs once, as a script outside
     the repository; its code and tests don't stay.
