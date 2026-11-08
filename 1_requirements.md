@@ -19,3 +19,6 @@ What has to be built, agreed before anything else starts.
    set of real examples, never from imagination.
 7. **The owner's preferences are recorded as they come up;** each becomes a requirement,
    a planned item, or both.
+8. **The first use takes little effort and shows results:** a new user gets something
+   useful from the first run, with only the setup that run needs. Integrations (notifications,
+   scheduling) come as a second step, once the user has seen the value.

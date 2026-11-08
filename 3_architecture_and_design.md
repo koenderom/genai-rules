@@ -50,6 +50,9 @@ When two goals pull in different directions, the higher one wins.
 8. **High cohesion, low coupling, locality of change:** what belongs together sits
    together; parts depend on each other as little as possible, and only through what
    they're given; one change in behaviour means a change in one place.
+   - **Information hiding:** what a part does inside stays inside it. E.g. only the
+     database module knows which database is used; the rest of the program asks it for
+     data.
 9. **Organize by subject, not by processing stage:** everything about one subject (its
    checks, its calculation) sits together.
 10. **Keep structure; don't flatten it:** pass the whole object, not a string glued
@@ -117,6 +120,8 @@ Where the named principles in these rules come from, for the full reasoning.
 - **Law of Demeter:** proposed by Ian Holland at Northeastern University in 1987; Karl
   Lieberherr, Ian Holland and Arthur Riel, "Object-Oriented Programming: An Objective
   Sense of Style", OOPSLA (1988).
+- **Information hiding:** David Parnas, "On the Criteria To Be Used in Decomposing Systems
+  into Modules", *Communications of the ACM* (1972).
 - **Functional core, imperative shell:** Gary Bernhardt,
   ["Functional Core, Imperative Shell"](https://www.destroyallsoftware.com/screencasts/catalog/functional-core-imperative-shell)
   (screencast) and ["Boundaries"](https://www.destroyallsoftware.com/talks/boundaries)
