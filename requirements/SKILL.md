@@ -23,13 +23,16 @@ What has to be built, agreed before anything else starts.
    set of real examples, never from imagination.
 7. **The owner's preferences are recorded as they come up;** each becomes a requirement,
    a planned item, or both.
-8. **Every non-functional requirement is made explicit too,** in this stage, like the
+8. **The first use takes little effort and shows results:** a new user gets something
+   useful from the first run, with only the setup that run needs. Integrations
+   (notifications, scheduling) come as a second step, once the user has seen the value.
+9. **Every non-functional requirement is made explicit too,** in this stage, like the
    functional ones and with how each is verified: quality (speed, security,
    reliability, maintainability), constraints (platforms, language and versions,
    licence, cost), and the project's own coding rules and tools.
-9. **Rules for this project only are its non-functional requirements:** kept in the
+10. **Rules for this project only are its non-functional requirements:** kept in the
    project's repository, referenced from its requirements, and loaded in every
    conversation (for Claude: imported by the project's `CLAUDE.md`). Rules for any
    project belong in the rules repository instead.
-10. **How the project uses the rules repository is decided here:** a submodule in the
+11. **How the project uses the rules repository is decided here:** a submodule in the
     project, one copy for all of the owner's projects, or an assistant's plugin.

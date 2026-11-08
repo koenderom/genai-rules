@@ -30,6 +30,8 @@ reader, not the assistant: this file isn't loaded with the rules.
 - **Law of Demeter:** proposed by Ian Holland at Northeastern University in 1987; Karl
   Lieberherr, Ian Holland and Arthur Riel, "Object-Oriented Programming: An Objective
   Sense of Style", OOPSLA (1988).
+- **Information hiding:** David Parnas, "On the Criteria To Be Used in Decomposing Systems
+  into Modules", *Communications of the ACM* (1972).
 - **Functional core, imperative shell:** Gary Bernhardt,
   ["Functional Core, Imperative Shell"](https://www.destroyallsoftware.com/screencasts/catalog/functional-core-imperative-shell)
   (screencast) and ["Boundaries"](https://www.destroyallsoftware.com/talks/boundaries)
