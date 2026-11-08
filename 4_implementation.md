@@ -63,45 +63,50 @@ too, at the level of each function.
     (command-query separation):** a question returns its answer and changes nothing; a
     command changes something and its name says so. An exception (e.g. "pop": remove and
     return) is named so the effect is visible at the call site.
-20. **Functions with a similar role have the same signature:** same parameters, same
+20. **Every function declares its types,** where the language supports it: the type of
+    each input and of the output, "nothing" included. The signature then says what goes in
+    and what comes out, and a checker verifies every call against it. A value that can be
+    anything is declared as such, so the checker makes the code check it before use;
+    never as "no checking". Tests may be the exception.
+21. **Functions with a similar role have the same signature:** same parameters, same
     order; but never parameters a function doesn't use (interface segregation wins,
     design rule 7).
-21. **One level of abstraction per function:** its lines are all at the same level, so a
+22. **One level of abstraction per function:** its lines are all at the same level, so a
     top-level function reads like a summary, and the details sit in the functions it
     calls.
-22. **No duplicated code: each operation is written once, and reused wherever it's
+23. **No duplicated code: each operation is written once, and reused wherever it's
     needed,** so a fix lands everywhere and a reader recognises the operation by its name.
     No duplication takes priority over other rules.
     - **A verbatim copy** (about five lines or more) becomes one function at its first
       copy (e.g. splitting a comma-separated text into its parts).
     - **A recurring structure** that isn't a verbatim copy (the same shape of code, with
       different details) gets a generic implementation from its third appearance on.
-23. **A helper used in one place sits next to that place,** or as close to it as the
+24. **A helper used in one place sits next to that place,** or as close to it as the
     language allows.
-24. **Normalize once, at the edge, and keep only the normalized form** (clean or
+25. **Normalize once, at the edge, and keep only the normalized form** (clean or
     lowercase the input where it's read, not at every use).
-25. **No unexplained numbers:** a number that shapes a result is a named constant at the
+26. **No unexplained numbers:** a number that shapes a result is a named constant at the
     top of the file, with where its value comes from; values that depend on each other
     are derived, not set separately.
-26. **General functionality is kept apart from user-specific settings:** the code never
+27. **General functionality is kept apart from user-specific settings:** the code never
     hard-codes anything specific to one user; that goes in configuration files, which
     may be kept private. Examples and tests use invented data.
 
 ## Errors
 
-27. **Fail fast:** report a problem where it happens, as early as possible, instead of
+28. **Fail fast:** report a problem where it happens, as early as possible, instead of
     continuing with bad data: a broken configuration stops the program before it starts
     working; an impossible value raises where it's found, not three calls later.
-28. **Catch specific errors, never all of them;** when bad input is tolerated, log a
+29. **Catch specific errors, never all of them;** when bad input is tolerated, log a
     warning, so nothing disappears silently.
-29. **For compiled code, warnings are errors:** the build treats every compiler warning as
+30. **For compiled code, warnings are errors:** the build treats every compiler warning as
     an error, so none is left standing.
 
 ## Changes and tests
 
-30. **One subject per change, in small steps.** A change that needs another one merged
+31. **One subject per change, in small steps.** A change that needs another one merged
     first says so in its title ("merge after ...").
-31. **Code and its tests are written together.** Untested code doesn't exist: it gets
+32. **Code and its tests are written together.** Untested code doesn't exist: it gets
     tested (code that talks to an outside system: at least one real run) or removed.
-32. **One-off work isn't kept:** a data migration or repair runs once, as a script outside
+33. **One-off work isn't kept:** a data migration or repair runs once, as a script outside
     the repository; its code and tests don't stay.
