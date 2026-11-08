@@ -10,3 +10,14 @@ How the code stays healthy as it changes.
    the environment and are read only by the part that uses them.
 4. **New features and bug fixes don't increase complexity.** When one would, go back to
    architecture and design first, and refactor where needed, after the owner's approval.
+
+## Sources
+
+Where the named principles in these rules come from, for the full reasoning. Each is
+checked against its Wikipedia article, the publisher, or the original text.
+
+- **The boy-scout rule:** Robert C. Martin, *Clean Code* (2008), chapter 1.
+- **Broken windows:** Andrew Hunt and David Thomas, *The Pragmatic Programmer* (1999),
+  after James Q. Wilson and George Kelling's "broken windows" theory (1982).
+- **Least privilege:** Jerome Saltzer and Michael Schroeder, "The Protection of
+  Information in Computer Systems", *Proceedings of the IEEE* (1975).

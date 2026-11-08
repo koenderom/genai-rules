@@ -50,8 +50,4 @@ files together with this one.
 
 ## Still to discuss
 
-- Software craftsmanship principles not yet decided: composition over inheritance; the
-  law of Demeter; a single level of abstraction per function; fail fast; least
-  astonishment; command-query separation; functional core, imperative shell; parse,
-  don't validate; the robustness principle; idempotence.
 - Rules from published guidelines and agent-instruction practice, still to select.
