@@ -72,8 +72,9 @@ too, at the level of each function.
 22. **No duplicated code: each operation is written once, and reused wherever it's
     needed,** so a fix lands everywhere and a reader recognises the operation by its name.
     No duplication takes priority over other rules.
-    - **A verbatim copy** (about five lines or more) becomes one function at its first
-      copy (e.g. splitting a comma-separated text into its parts).
+    - **A copy** becomes one function at its first copy (e.g. splitting a comma-separated
+      text into its parts, even in two lines). Only a short one-liner that reads clearly
+      on its own stays inline.
     - **A recurring structure** that isn't a verbatim copy (the same shape of code, with
       different details) gets a generic implementation from its third appearance on.
 23. **A helper used in one place sits next to that place,** or as close to it as the
