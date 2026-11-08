@@ -30,7 +30,7 @@ How every change is checked before it counts as done.
    - **Coding style is checked by tools, not by eye:** the language's standard formatter
      and linters (in Python, e.g. ruff), configured in the project and run on every
      change. The reviewer's attention goes to what tools can't judge.
-6. **Run the review skills on the changed files** ([skills](../../claude/skills.md));
+6. **Run the review skills on the changed files** ([skills](../claude/skills.md));
    fix each finding, or say in the description why it stays.
 7. **Look for the same problem elsewhere** and fix it in the same way.
 8. **Measure what the change does to the results,** when it affects them: run before

@@ -3,13 +3,13 @@
 How the assistant and the project's owner work together. The work goes through seven
 stages, in this order; each stage has its own rules:
 
-1. [Requirements](skills/requirements/SKILL.md)
-2. [Planning and tracking](skills/planning-and-tracking/SKILL.md)
-3. [Architecture and design](skills/architecture-and-design/SKILL.md)
-4. [Implementation](skills/implementation/SKILL.md)
-5. [Review and testing](skills/review-and-testing/SKILL.md)
-6. [Deployment and documentation](skills/deployment-and-documentation/SKILL.md)
-7. [Maintenance](skills/maintenance/SKILL.md)
+1. [Requirements](requirements/SKILL.md)
+2. [Planning and tracking](planning-and-tracking/SKILL.md)
+3. [Architecture and design](architecture-and-design/SKILL.md)
+4. [Implementation](implementation/SKILL.md)
+5. [Review and testing](review-and-testing/SKILL.md)
+6. [Deployment and documentation](deployment-and-documentation/SKILL.md)
+7. [Maintenance](maintenance/SKILL.md)
 
 ## Rules for every stage
 
@@ -26,8 +26,9 @@ stages, in this order; each stage has its own rules:
    places and change them the same way.
 6. **Say what wasn't verified.** Work is reported as done only when it is; anything only
    partly checked is named as such.
-7. **Rules stay project-agnostic here.** A rule that holds for one project only goes into
-   that project's own documents.
+7. **Rules stay project-agnostic here.** A rule that holds for one project only is one of
+   that project's non-functional requirements, kept in the project (requirements rules).
+   Skills all live here, a project's own skills included.
 8. **Keep the working context small, to save tokens:** compress it regularly, or start a
    new conversation when a task is done.
    - Always under the owner's control: proposed, never done without telling the owner.
@@ -55,6 +56,14 @@ stages, in this order; each stage has its own rules:
   stage (each skill's description says when), or when the owner calls the skill by name.
 - This file is the only one loaded in every conversation; the stage rules load only when
   they're needed, which keeps the working context small (rule 8).
+
+## The rules in a project
+
+- The rules repository is added to the project as a git submodule, at the place where
+  the assistant looks for skills, so every stage skill is found without copies or links.
+  The assistant's own folder says how (for Claude: [`claude/CLAUDE.md`](claude/CLAUDE.md)).
+- Which way a project uses (this submodule, one copy for all of the owner's projects, or
+  an assistant's plugin) is decided with its requirements.
 
 ## Still to discuss
 

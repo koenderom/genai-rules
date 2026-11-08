@@ -63,7 +63,8 @@ When two goals pull in different directions, the higher one wins.
    together from its parts. A decision that may grow smarter later is a function of its
    own, taking the whole object.
 11. **Specifics live in configuration, not in the code:** personal values, preferences
-   and thresholds are configured; the code stays general.
+   and thresholds are configured, in files that may be kept private; the code stays
+   general. Examples and tests use invented data.
 12. **Configuration is checked when it's loaded:**
     - a mistake stops the program at the start, with a message saying what to fix;
     - where the intent is obvious, the program fixes it and warns, instead of making the
