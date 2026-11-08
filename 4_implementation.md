@@ -105,3 +105,18 @@ too, at the level of each function.
     tested (code that talks to an outside system: at least one real run) or removed.
 32. **One-off work isn't kept:** a data migration or repair runs once, as a script outside
     the repository; its code and tests don't stay.
+
+## Sources
+
+Where the named principles in these rules come from, for the full reasoning.
+
+- **Explicit is better than implicit:** Tim Peters, *The Zen of Python*,
+  [PEP 20](https://peps.python.org/pep-0020/).
+- **No code that isn't needed now (YAGNI):** see the design rules' sources.
+- **No duplicated code (DRY):** Andrew Hunt and David Thomas, *The Pragmatic Programmer*
+  (1999).
+- **Command-query separation:** Bertrand Meyer, *Object-Oriented Software Construction*
+  (1988).
+- **One level of abstraction per function:** Kent Beck, *Smalltalk Best Practice
+  Patterns* (1997), "Composed Method"; Robert C. Martin, *Clean Code* (2008), chapter 3.
+- **Fail fast:** Jim Shore, "Fail Fast", *IEEE Software* (2004).

@@ -91,3 +91,41 @@ When two goals pull in different directions, the higher one wins.
 19. **Idempotence:** running the same operation twice gives the same result as once. A
     repeated run updates instead of duplicating, sends a notification once, and can be
     restarted safely after a failure partway.
+
+## Sources
+
+Where the named principles in these rules come from, for the full reasoning.
+
+- **Simplicity (KISS):** attributed to Kelly Johnson, engineer at Lockheed's Skunk Works,
+  around 1960.
+- **Build only what is needed now (YAGNI):** Extreme Programming: Kent Beck, *Extreme
+  Programming Explained* (1999); Martin Fowler,
+  ["Yagni"](https://martinfowler.com/bliki/Yagni.html).
+- **Make it fast only where measurements show the need:** Donald Knuth, "Structured
+  Programming with go to Statements", *Computing Surveys* (1974): "premature optimization
+  is the root of all evil".
+- **Abstract a recurring structure from its third appearance (rule of three):** Martin
+  Fowler, *Refactoring* (1999), who credits Don Roberts.
+- **SOLID:** Robert C. Martin, "Design Principles and Design Patterns" (2000), and *Agile
+  Software Development: Principles, Patterns, and Practices* (2002); the acronym is
+  Michael Feathers'.
+  - Open-closed: Bertrand Meyer, *Object-Oriented Software Construction* (1988).
+  - Liskov substitution: Barbara Liskov, "Data Abstraction and Hierarchy", OOPSLA (1987);
+    Barbara Liskov and Jeannette Wing, "A Behavioral Notion of Subtyping", *ACM TOPLAS*
+    (1994).
+- **Design patterns, and composition over inheritance:** Gamma, Helm, Johnson and
+  Vlissides, *Design Patterns* (1994): "favor object composition over class inheritance".
+- **Law of Demeter:** Karl Lieberherr, Ian Holland and Arthur Riel, "Object-Oriented
+  Programming: An Objective Sense of Style", OOPSLA (1988).
+- **Functional core, imperative shell:** Gary Bernhardt, "Boundaries" (talk, 2012).
+- **Make illegal states unrepresentable:** Yaron Minsky, "Effective ML" (talk, 2010);
+  **parse, don't validate:** Alexis King,
+  ["Parse, don't validate"](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)
+  (2019).
+- **Robustness principle:** Jon Postel, in the TCP specification,
+  [RFC 761](https://www.rfc-editor.org/rfc/rfc761) (1980).
+- **Idempotence:** a term from mathematics; for operations that may be repeated, see the
+  HTTP specification, [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110), "Idempotent
+  Methods".
+- **Store each fact once (normalization):** Edgar F. Codd, "A Relational Model of Data for
+  Large Shared Data Banks", *Communications of the ACM* (1970).
