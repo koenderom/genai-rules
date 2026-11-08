@@ -1,7 +1,12 @@
+---
+name: implementation
+description: Rules for writing code. Use whenever code, tests or code comments are written or changed.
+---
+
 # 4. Implementation
 
-How the code is written. The design rules ([3](3_architecture_and_design.md)) apply here
-too, at the level of each function.
+How the code is written. The architecture and design rules apply here too, at the level of
+each function.
 
 ## Simplicity
 
@@ -11,8 +16,8 @@ too, at the level of each function.
    if it's longer. A clever construction needs a reason the reader can check, stated next
    to it.
 3. **Explicit is better than implicit** (the Zen of Python): what code depends on and
-   what it does shows where it's used: values are passed, not picked up from global
-   state; behaviour is stated, not left to a default the reader must know. This rule
+   what it does shows where it's used: behaviour is stated, not left to a default the
+   reader must know. This rule
    itself is an example: written out, rather than assumed from "keep it clear".
 4. **No code that isn't needed now:** no options, parameters or abstractions nobody asked
    for.
@@ -49,8 +54,7 @@ too, at the level of each function.
 15. **A comment never suggests behaviour the code doesn't have.**
 16. **Each explanation lives once, where its reader looks** (a setting is explained in
     the configuration file, not again in the code).
-17. **Structured for readability:** concise, to the point and precise; bullets over
-    prose, one idea per bullet.
+17. **Concise, to the point and precise.**
 
 ## Functions and data
 
@@ -70,7 +74,7 @@ too, at the level of each function.
     never as "no checking". Tests may be the exception.
 21. **Functions with a similar role have the same signature:** same parameters, same
     order; but never parameters a function doesn't use (interface segregation wins,
-    design rule 7).
+    see the design rules).
 22. **One level of abstraction per function:** its lines are all at the same level, so a
     top-level function reads like a summary, and the details sit in the functions it
     calls.
@@ -116,23 +120,3 @@ too, at the level of each function.
     tested (code that talks to an outside system: at least one real run) or removed.
 34. **One-off work isn't kept:** a data migration or repair runs once, as a script outside
     the repository; its code and tests don't stay.
-
-## Sources
-
-Where the named principles in these rules come from, for the full reasoning.
-
-- **Explicit is better than implicit:** Tim Peters, *The Zen of Python*,
-  [PEP 20](https://peps.python.org/pep-0020/).
-- **No code that isn't needed now (YAGNI):** see the design rules' sources.
-- **No duplicated code (DRY):** Andrew Hunt and David Thomas, *The Pragmatic Programmer*
-  (1999).
-- **Command-query separation:** Bertrand Meyer, *Object-Oriented Software Construction*
-  (1988).
-- **One level of abstraction per function:** Kent Beck, *Smalltalk Best Practice
-  Patterns* (1997), "Composed Method"; Robert C. Martin, *Clean Code* (2008), chapter 3.
-- **No global or shared mutable state:** Andrew Hunt and David Thomas, *The Pragmatic
-  Programmer*, 20th anniversary edition (2019), tips 47 ("Avoid Global Data"), 48, 50
-  ("Don't Hoard State; Pass It Around") and 57 ("Shared State Is Incorrect State").
-- **Fail fast:** Jim Gray, "Why Do Computers Stop and What Can Be Done About It?" (1985),
-  for systems; Jim Shore, ["Fail Fast"](https://martinfowler.com/ieeeSoftware/failFast.pdf),
-  *IEEE Software* (2004), for code.

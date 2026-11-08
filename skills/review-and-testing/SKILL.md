@@ -1,3 +1,8 @@
+---
+name: review-and-testing
+description: Rules for review and testing. Use when preparing or reviewing a pull request, answering review comments, writing or checking tests, and before calling a change done.
+---
+
 # 5. Review and testing
 
 How every change is checked before it counts as done.
@@ -18,22 +23,23 @@ How every change is checked before it counts as done.
    request's view.
 3. **Check it against what it is for:** the requirement it implements, and how that
    requirement is verified.
-4. **Check it against every implementation rule** ([4](4_implementation.md)): names,
+4. **Check it against every implementation rule:** names,
    comments, simplicity, consistency with the rest of the code.
 5. **Run all automatic checks** (formatting, linting, type checking, dead-code search,
    tests): every one passes, with no warnings left.
    - **Coding style is checked by tools, not by eye:** the language's standard formatter
      and linters (in Python, e.g. ruff), configured in the project and run on every
      change. The reviewer's attention goes to what tools can't judge.
-6. **Run the review skills on the changed files** ([skills](claude/skills.md)); fix each
-   finding, or say in the description why it stays.
+6. **Run the review skills on the changed files** ([skills](../../claude/skills.md));
+   fix each finding, or say in the description why it stays.
 7. **Look for the same problem elsewhere** and fix it in the same way.
-8. **Measure what the change does to the results,** when it affects them (see rule 22).
+8. **Measure what the change does to the results,** when it affects them: run before
+   and after on a representative real data set, and report the difference.
 
 ### The pull request
 
-9. **One subject per pull request, always against the main branch:** no pull request
-   built on top of another, no pair that undoes and redoes the same change.
+9. **Always against the main branch:** no pull request built on top of another, no
+   pair that undoes and redoes the same change.
 10. **Small enough to review in one sitting;** a larger change is split into pull
     requests that each stand on their own.
 11. **The title says in plain words what changes,** and "merge after ..." when it depends
@@ -48,7 +54,7 @@ How every change is checked before it counts as done.
     nothing did. Comments are fetched again right before answering. When replies in the
     threads aren't possible, the answers go in one comment on the pull request, each
     quoting the remark it answers.
-14. **A comment about one place is applied everywhere it applies** (general rule 5).
+14. **A comment about one place is applied everywhere it applies** (way of working, rule 5).
 15. **No rewriting of history under review:** no force-push to a pull request being
     reviewed; bring it up to date by merging the main branch into it.
 16. **Pull requests are referred to by clickable links,** never by bare numbers.
@@ -69,28 +75,16 @@ How every change is checked before it counts as done.
     placeholder values, visible steps, and the standard mocking tools instead of
     home-made fakes. Test data looks like the real thing, with invented names, so every
     decision rule gets exercised.
-22. **Changes that affect results are measured:** run before and after on a
-    representative real data set, and report the difference.
-23. **Tests follow F.I.R.S.T.:**
+22. **Tests are fast, independent, repeatable and self-validating:**
     - **fast:** the whole suite runs in seconds, so it runs on every change;
     - **independent:** no test relies on another one's result or order;
     - **repeatable:** the same result every time, anywhere: no network, no real clock, no
       random input without a fixed seed;
     - **self-validating:** each test passes or fails, with nothing to inspect by hand;
-    - **timely:** written together with the code, not afterwards.
-24. **A bug gets a failing test first:** reproduce it in a test that fails, then fix the
+23. **A bug gets a failing test first:** reproduce it in a test that fails, then fix the
     code until the test passes. The test stays, so the same bug is found only once.
-25. **Every check runs automatically on every change, and gives the same result every
+24. **Every check runs automatically on every change, and gives the same result every
     time:** tests, linters and type checks run on every push (continuous integration), on
     each supported version of the language. Dependencies are pinned, so any run can be
     reproduced; no step depends on a manual procedure.
-26. **Done means implemented, tested, reviewed and documented.**
-
-## Sources
-
-- **F.I.R.S.T.:** Robert C. Martin, *Clean Code* (2008), chapter 9, "Unit Tests".
-- **A failing test first; find bugs once:** Andrew Hunt and David Thomas, *The Pragmatic
-  Programmer*, 20th anniversary edition (2019), tips 31 and 94.
-- **Automatic, reproducible checks:** *The Pragmatic Programmer*, tips 89 ("Use Version
-  Control to Drive Builds, Tests, and Releases"), 90 ("Test Early, Test Often, Test
-  Automatically") and 95 ("Don't Use Manual Procedures").
+25. **Done means implemented, tested, reviewed and documented.**

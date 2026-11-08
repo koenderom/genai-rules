@@ -1,3 +1,8 @@
+---
+name: architecture-and-design
+description: Rules for architecture and design. Use when deciding how a solution is structured: new components, modules, data models, configuration, before code is written.
+---
+
 # 3. Architecture and design
 
 How the solution is structured, decided before it's built.
@@ -93,50 +98,3 @@ When two goals pull in different directions, the higher one wins.
 19. **Idempotence:** running the same operation twice gives the same result as once. A
     repeated run updates instead of duplicating, sends a notification once, and can be
     restarted safely after a failure partway.
-
-## Sources
-
-Where the named principles in these rules come from, for the full reasoning.
-
-- **Simplicity (KISS):** first noted by the U.S. Navy in 1960; associated with Kelly
-  Johnson, engineer at Lockheed's Skunk Works.
-- **Passes the tests, reveals intention, no duplication, fewest elements (Beck's four
-  rules of simple design, in that order):** Kent Beck, *Extreme Programming Explained*
-  (1999), in the practice of simple design; Martin Fowler,
-  ["Beck Design Rules"](https://martinfowler.com/bliki/BeckDesignRules.html).
-- **Build only what is needed now (YAGNI):** Extreme Programming; Ron Jeffries, one of its
-  founders; Martin Fowler, ["Yagni"](https://martinfowler.com/bliki/Yagni.html).
-- **Make it fast only where measurements show the need:** Donald Knuth, "Structured
-  Programming with go to Statements", *Computing Surveys* (1974): "premature optimization
-  is the root of all evil".
-- **Abstract a recurring structure from its third appearance (rule of three):** Martin
-  Fowler, *Refactoring* (1999), who credits Don Roberts.
-- **SOLID:** Robert C. Martin, "Design Principles and Design Patterns" (2000), and *Agile
-  Software Development: Principles, Patterns, and Practices* (2002); the acronym is
-  Michael Feathers', around 2004.
-  - Open-closed: Bertrand Meyer, *Object-Oriented Software Construction* (1988).
-  - Liskov substitution: Barbara Liskov, "Data Abstraction and Hierarchy", OOPSLA (1987);
-    Barbara Liskov and Jeannette Wing, "A Behavioral Notion of Subtyping", *ACM TOPLAS*
-    (1994).
-- **Design patterns, and composition over inheritance:** Gamma, Helm, Johnson and
-  Vlissides, *Design Patterns* (1994): "favor object composition over class inheritance".
-- **Law of Demeter:** proposed by Ian Holland at Northeastern University in 1987; Karl
-  Lieberherr, Ian Holland and Arthur Riel, "Object-Oriented Programming: An Objective
-  Sense of Style", OOPSLA (1988).
-- **Functional core, imperative shell:** Gary Bernhardt,
-  ["Functional Core, Imperative Shell"](https://www.destroyallsoftware.com/screencasts/catalog/functional-core-imperative-shell)
-  (screencast) and ["Boundaries"](https://www.destroyallsoftware.com/talks/boundaries)
-  (talk, SCNA 2012).
-- **Make illegal states unrepresentable:** Yaron Minsky, "Effective ML" (lecture at
-  Harvard, 2010; see his
-  ["Effective ML Revisited"](https://blog.janestreet.com/effective-ml-revisited/));
-  **parse, don't validate:** Alexis King,
-  ["Parse, don't validate"](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)
-  (2019).
-- **Robustness principle:** Jon Postel, in the TCP specification,
-  [RFC 761](https://www.rfc-editor.org/rfc/rfc761) (1980).
-- **Idempotence:** a term from mathematics; for operations that may be repeated, see the
-  HTTP specification, [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110), "Idempotent
-  Methods".
-- **Store each fact once (normalization):** Edgar F. Codd, "A Relational Model of Data for
-  Large Shared Data Banks", *Communications of the ACM* (1970).

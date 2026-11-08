@@ -1,3 +1,8 @@
+---
+name: requirements
+description: Rules for the requirements stage. Use before building anything new: when a new function, feature or change is asked for, while requirements are elicited, written down or approved.
+---
+
 # 1. Requirements
 
 What has to be built, agreed before anything else starts.

@@ -3,13 +3,13 @@
 How the assistant and the project's owner work together. The work goes through seven
 stages, in this order; each stage has its own rules:
 
-1. [Requirements](1_requirements.md)
-2. [Planning and tracking](2_planning_and_tracking.md)
-3. [Architecture and design](3_architecture_and_design.md)
-4. [Implementation](4_implementation.md)
-5. [Review and testing](5_review_and_testing.md)
-6. [Deployment and documentation](6_deployment_and_documentation.md)
-7. [Maintenance](7_maintenance.md)
+1. [Requirements](skills/requirements/SKILL.md)
+2. [Planning and tracking](skills/planning-and-tracking/SKILL.md)
+3. [Architecture and design](skills/architecture-and-design/SKILL.md)
+4. [Implementation](skills/implementation/SKILL.md)
+5. [Review and testing](skills/review-and-testing/SKILL.md)
+6. [Deployment and documentation](skills/deployment-and-documentation/SKILL.md)
+7. [Maintenance](skills/maintenance/SKILL.md)
 
 ## Rules for every stage
 
@@ -46,20 +46,15 @@ stages, in this order; each stage has its own rules:
    - **Exploration in a helper agent,** where the assistant has one: a broad search runs
      there and returns only its conclusion.
    - **Short instruction files:** under about 200 lines each. Splitting them into imported
-     files doesn't save anything: imports are loaded in full.
+     files doesn't save anything: imports are loaded in full. Rules needed in one stage
+     only are a skill instead, loaded when that stage's work starts.
 
-## The stage files, loaded with this one
+## The stage rules, as skills
 
-An assistant loads only the files it's pointed at; these lines make it load the stage
-files together with this one.
-
-@1_requirements.md
-@2_planning_and_tracking.md
-@3_architecture_and_design.md
-@4_implementation.md
-@5_review_and_testing.md
-@6_deployment_and_documentation.md
-@7_maintenance.md
+- Each stage's rules are a skill: the assistant loads them when a task belongs to that
+  stage (each skill's description says when), or when the owner calls the skill by name.
+- This file is the only one loaded in every conversation; the stage rules load only when
+  they're needed, which keeps the working context small (rule 8).
 
 ## Still to discuss
 

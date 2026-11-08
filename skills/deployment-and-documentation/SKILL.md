@@ -1,3 +1,8 @@
+---
+name: deployment-and-documentation
+description: Rules for publishing and documentation. Use when committing, merging or publishing, and when writing or changing documentation (README, guides, rules, notes).
+---
+
 # 6. Deployment and documentation
 
 How changes are published, and how the project explains itself.
@@ -7,7 +12,7 @@ How changes are published, and how the project explains itself.
 1. **The main branch always works.** A change that depends on another one is merged
    after it.
 2. **Outside the pull-request flow, nothing is committed or pushed without the owner's
-   approval each time;** commits stay small, one change each.
+   approval each time.**
 3. **Nothing user-specific is published:** user-specific configuration and notes live in
    a private repository.
 4. **No repository goes public without a license chosen for it.** Without one, nobody
