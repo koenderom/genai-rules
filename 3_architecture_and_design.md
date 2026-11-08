@@ -7,7 +7,7 @@ How the solution is structured, decided before it's built.
 When two goals pull in different directions, the higher one wins.
 
 1. **Correct and safe:** the software reliably and consistently does what it's meant to
-   do, and fails visibly when it can't.
+   do, proven by passing tests rather than assumed, and fails visibly when it can't.
 2. **Maintainable and extensible:** a change touches one place and can't quietly break
    another.
 3. **Readable and reviewable** by a human who doesn't know it yet.
@@ -25,6 +25,8 @@ When two goals pull in different directions, the higher one wins.
      repetition. A verbatim copy of code is removed at once (implementation rule on
      duplicated code).
    - Make it right and clear first; make it fast only where measurements show the need.
+   - The fewest elements: once the code passes its tests, says what it's for and has no
+     duplication, every other class, function, parameter or layer goes.
 4. **Consistency:** one design approach throughout the project; a variation needs a
    stated reason. The same kind of part has the same structure.
 5. **General mechanisms over special cases:** a configurable scale rather than a switch
@@ -98,6 +100,10 @@ Where the named principles in these rules come from, for the full reasoning.
 
 - **Simplicity (KISS):** first noted by the U.S. Navy in 1960; associated with Kelly
   Johnson, engineer at Lockheed's Skunk Works.
+- **Passes the tests, reveals intention, no duplication, fewest elements (Beck's four
+  rules of simple design, in that order):** Kent Beck, *Extreme Programming Explained*
+  (1999), in the practice of simple design; Martin Fowler,
+  ["Beck Design Rules"](https://martinfowler.com/bliki/BeckDesignRules.html).
 - **Build only what is needed now (YAGNI):** Extreme Programming; Ron Jeffries, one of its
   founders; Martin Fowler, ["Yagni"](https://martinfowler.com/bliki/Yagni.html).
 - **Make it fast only where measurements show the need:** Donald Knuth, "Structured
