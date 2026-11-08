@@ -13,8 +13,7 @@ How the code stays healthy as it changes.
 
 ## Sources
 
-Where the named principles in these rules come from, for the full reasoning. Each is
-checked against its Wikipedia article, the publisher, or the original text.
+Where the named principles in these rules come from, for the full reasoning.
 
 - **The boy-scout rule:** Robert C. Martin, *Clean Code* (2008), chapter 1.
 - **Broken windows:** Andrew Hunt and David Thomas, *The Pragmatic Programmer* (1999),

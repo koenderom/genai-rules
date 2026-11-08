@@ -114,8 +114,7 @@ too, at the level of each function.
 
 ## Sources
 
-Where the named principles in these rules come from, for the full reasoning. Each is
-checked against its Wikipedia article, the publisher, or the original text.
+Where the named principles in these rules come from, for the full reasoning.
 
 - **Explicit is better than implicit:** Tim Peters, *The Zen of Python*,
   [PEP 20](https://peps.python.org/pep-0020/).

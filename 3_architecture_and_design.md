@@ -94,8 +94,7 @@ When two goals pull in different directions, the higher one wins.
 
 ## Sources
 
-Where the named principles in these rules come from, for the full reasoning. Each is
-checked against its Wikipedia article, the publisher, or the original text.
+Where the named principles in these rules come from, for the full reasoning.
 
 - **Simplicity (KISS):** first noted by the U.S. Navy in 1960; associated with Kelly
   Johnson, engineer at Lockheed's Skunk Works.
