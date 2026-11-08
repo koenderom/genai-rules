@@ -44,8 +44,11 @@ How every change is checked before it counts as done.
 
 ### During the review
 
-13. **Every review comment gets an answer in its thread,** saying what changed or why
-    nothing did. Comments are fetched again right before answering. When replies in the
+13. **Every review comment gets an answer in its thread, starting with the action
+    taken:** code updated (with a link to the commit or pull request), noted in the
+    backlog (with the item), proposed and waiting for the owner's choice, or rejected (with
+    the reason). The reviewer sees at a glance what happens to each remark, and nothing
+    stays in limbo. Comments are fetched again right before answering. When replies in the
     threads aren't possible, the answers go in one comment on the pull request, each
     quoting the remark it answers.
 14. **A comment about one place is applied everywhere it applies** (general rule 5).
