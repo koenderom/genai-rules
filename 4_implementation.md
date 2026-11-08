@@ -46,6 +46,9 @@ too, at the level of each function.
     using it; explain every non-obvious construct where it appears (a regular expression
     with an example of what it matches, an operator with a special meaning, a formula's
     closed form).
+    - Code that reads an outside format (a web page, another system's records) describes
+      that format where it's read: how it's built and which parts are used, with a real
+      example.
 15. **A comment never suggests behaviour the code doesn't have.**
 16. **Each explanation lives once, where its reader looks** (a setting is explained in
     the configuration file, not again in the code).

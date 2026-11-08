@@ -77,6 +77,8 @@ How every change is checked before it counts as done.
     placeholder values, visible steps, and the standard mocking tools instead of
     home-made fakes. Test data looks like the real thing, with invented names, so every
     decision rule gets exercised.
+    - That includes the incomplete input the outside world sends (an empty record,
+      missing fields, unexpected values): the program handles it without failing.
 22. **Changes that affect results are measured:** run before and after on a
     representative real data set, and report the difference.
 23. **Tests follow F.I.R.S.T.:**
