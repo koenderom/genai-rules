@@ -108,7 +108,8 @@ too, at the level of each function.
 
 ## Sources
 
-Where the named principles in these rules come from, for the full reasoning.
+Where the named principles in these rules come from, for the full reasoning. Each is
+checked against its Wikipedia article, the publisher, or the original text.
 
 - **Explicit is better than implicit:** Tim Peters, *The Zen of Python*,
   [PEP 20](https://peps.python.org/pep-0020/).
@@ -119,4 +120,6 @@ Where the named principles in these rules come from, for the full reasoning.
   (1988).
 - **One level of abstraction per function:** Kent Beck, *Smalltalk Best Practice
   Patterns* (1997), "Composed Method"; Robert C. Martin, *Clean Code* (2008), chapter 3.
-- **Fail fast:** Jim Shore, "Fail Fast", *IEEE Software* (2004).
+- **Fail fast:** Jim Gray, "Why Do Computers Stop and What Can Be Done About It?" (1985),
+  for systems; Jim Shore, ["Fail Fast"](https://martinfowler.com/ieeeSoftware/failFast.pdf),
+  *IEEE Software* (2004), for code.

@@ -94,13 +94,13 @@ When two goals pull in different directions, the higher one wins.
 
 ## Sources
 
-Where the named principles in these rules come from, for the full reasoning.
+Where the named principles in these rules come from, for the full reasoning. Each is
+checked against its Wikipedia article, the publisher, or the original text.
 
-- **Simplicity (KISS):** attributed to Kelly Johnson, engineer at Lockheed's Skunk Works,
-  around 1960.
-- **Build only what is needed now (YAGNI):** Extreme Programming: Kent Beck, *Extreme
-  Programming Explained* (1999); Martin Fowler,
-  ["Yagni"](https://martinfowler.com/bliki/Yagni.html).
+- **Simplicity (KISS):** first noted by the U.S. Navy in 1960; associated with Kelly
+  Johnson, engineer at Lockheed's Skunk Works.
+- **Build only what is needed now (YAGNI):** Extreme Programming; Ron Jeffries, one of its
+  founders; Martin Fowler, ["Yagni"](https://martinfowler.com/bliki/Yagni.html).
 - **Make it fast only where measurements show the need:** Donald Knuth, "Structured
   Programming with go to Statements", *Computing Surveys* (1974): "premature optimization
   is the root of all evil".
@@ -108,17 +108,23 @@ Where the named principles in these rules come from, for the full reasoning.
   Fowler, *Refactoring* (1999), who credits Don Roberts.
 - **SOLID:** Robert C. Martin, "Design Principles and Design Patterns" (2000), and *Agile
   Software Development: Principles, Patterns, and Practices* (2002); the acronym is
-  Michael Feathers'.
+  Michael Feathers', around 2004.
   - Open-closed: Bertrand Meyer, *Object-Oriented Software Construction* (1988).
   - Liskov substitution: Barbara Liskov, "Data Abstraction and Hierarchy", OOPSLA (1987);
     Barbara Liskov and Jeannette Wing, "A Behavioral Notion of Subtyping", *ACM TOPLAS*
     (1994).
 - **Design patterns, and composition over inheritance:** Gamma, Helm, Johnson and
   Vlissides, *Design Patterns* (1994): "favor object composition over class inheritance".
-- **Law of Demeter:** Karl Lieberherr, Ian Holland and Arthur Riel, "Object-Oriented
-  Programming: An Objective Sense of Style", OOPSLA (1988).
-- **Functional core, imperative shell:** Gary Bernhardt, "Boundaries" (talk, 2012).
-- **Make illegal states unrepresentable:** Yaron Minsky, "Effective ML" (talk, 2010);
+- **Law of Demeter:** proposed by Ian Holland at Northeastern University in 1987; Karl
+  Lieberherr, Ian Holland and Arthur Riel, "Object-Oriented Programming: An Objective
+  Sense of Style", OOPSLA (1988).
+- **Functional core, imperative shell:** Gary Bernhardt,
+  ["Functional Core, Imperative Shell"](https://www.destroyallsoftware.com/screencasts/catalog/functional-core-imperative-shell)
+  (screencast) and ["Boundaries"](https://www.destroyallsoftware.com/talks/boundaries)
+  (talk, SCNA 2012).
+- **Make illegal states unrepresentable:** Yaron Minsky, "Effective ML" (lecture at
+  Harvard, 2010; see his
+  ["Effective ML Revisited"](https://blog.janestreet.com/effective-ml-revisited/));
   **parse, don't validate:** Alexis King,
   ["Parse, don't validate"](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)
   (2019).
