@@ -34,6 +34,19 @@ stages, in this order; each stage has its own rules:
      Consecutive tasks may share context that is still needed.
    - Before a new context starts, the relevant context and the status go into a written
      file, so the work can be picked up from there.
+   - **Why it matters most:** every step re-reads the whole conversation, so the cost
+     grows with its length. Measured on one long session: nearly all tokens were the
+     conversation read again from the cache.
+   - **Fewer, larger steps:** independent commands go in one step; checks are chained in
+     one command.
+   - **Little output per step:** filter and count in the command itself (count matches,
+     show the first lines, a summary of changes) instead of printing whole files or logs;
+     read only the part of a file that's needed. Command output was two thirds of what
+     tools put into that session's context.
+   - **Exploration in a helper agent,** where the assistant has one: a broad search runs
+     there and returns only its conclusion.
+   - **Short instruction files:** under about 200 lines each. Splitting them into imported
+     files doesn't save anything: imports are loaded in full.
 
 ## The stage files, loaded with this one
 
