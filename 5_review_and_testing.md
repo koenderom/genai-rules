@@ -71,4 +71,26 @@ How every change is checked before it counts as done.
     decision rule gets exercised.
 22. **Changes that affect results are measured:** run before and after on a
     representative real data set, and report the difference.
-23. **Done means implemented, tested, reviewed and documented.**
+23. **Tests follow F.I.R.S.T.:**
+    - **fast:** the whole suite runs in seconds, so it runs on every change;
+    - **independent:** no test relies on another one's result or order;
+    - **repeatable:** the same result every time, anywhere: no network, no real clock, no
+      random input without a fixed seed;
+    - **self-validating:** each test passes or fails, with nothing to inspect by hand;
+    - **timely:** written together with the code, not afterwards.
+24. **A bug gets a failing test first:** reproduce it in a test that fails, then fix the
+    code until the test passes. The test stays, so the same bug is found only once.
+25. **Every check runs automatically on every change, and gives the same result every
+    time:** tests, linters and type checks run on every push (continuous integration), on
+    each supported version of the language. Dependencies are pinned, so any run can be
+    reproduced; no step depends on a manual procedure.
+26. **Done means implemented, tested, reviewed and documented.**
+
+## Sources
+
+- **F.I.R.S.T.:** Robert C. Martin, *Clean Code* (2008), chapter 9, "Unit Tests".
+- **A failing test first; find bugs once:** Andrew Hunt and David Thomas, *The Pragmatic
+  Programmer*, 20th anniversary edition (2019), tips 31 and 94.
+- **Automatic, reproducible checks:** *The Pragmatic Programmer*, tips 89 ("Use Version
+  Control to Drive Builds, Tests, and Releases"), 90 ("Test Early, Test Often, Test
+  Automatically") and 95 ("Don't Use Manual Procedures").

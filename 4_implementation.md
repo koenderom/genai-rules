@@ -93,23 +93,28 @@ too, at the level of each function.
     hard-codes anything specific to one user; that goes in configuration files, which
     may be kept private. Examples and tests use invented data.
 
+28. **No global or shared mutable state:** a function gets what it needs as parameters and
+    returns what it produces; values at module level are constants. State that really has
+    to be shared (a cache, a connection) sits behind one small interface, never changed
+    directly from several places.
+
 ## Errors
 
-28. **Fail fast:** report a problem where it happens, as early as possible, instead of
+29. **Fail fast:** report a problem where it happens, as early as possible, instead of
     continuing with bad data: a broken configuration stops the program before it starts
     working; an impossible value raises where it's found, not three calls later.
-29. **Catch specific errors, never all of them;** when bad input is tolerated, log a
+30. **Catch specific errors, never all of them;** when bad input is tolerated, log a
     warning, so nothing disappears silently.
-30. **For compiled code, warnings are errors:** the build treats every compiler warning as
+31. **For compiled code, warnings are errors:** the build treats every compiler warning as
     an error, so none is left standing.
 
 ## Changes and tests
 
-31. **One subject per change, in small steps.** A change that needs another one merged
+32. **One subject per change, in small steps.** A change that needs another one merged
     first says so in its title ("merge after ...").
-32. **Code and its tests are written together.** Untested code doesn't exist: it gets
+33. **Code and its tests are written together.** Untested code doesn't exist: it gets
     tested (code that talks to an outside system: at least one real run) or removed.
-33. **One-off work isn't kept:** a data migration or repair runs once, as a script outside
+34. **One-off work isn't kept:** a data migration or repair runs once, as a script outside
     the repository; its code and tests don't stay.
 
 ## Sources
@@ -125,6 +130,9 @@ Where the named principles in these rules come from, for the full reasoning.
   (1988).
 - **One level of abstraction per function:** Kent Beck, *Smalltalk Best Practice
   Patterns* (1997), "Composed Method"; Robert C. Martin, *Clean Code* (2008), chapter 3.
+- **No global or shared mutable state:** Andrew Hunt and David Thomas, *The Pragmatic
+  Programmer*, 20th anniversary edition (2019), tips 47 ("Avoid Global Data"), 48, 50
+  ("Don't Hoard State; Pass It Around") and 57 ("Shared State Is Incorrect State").
 - **Fail fast:** Jim Gray, "Why Do Computers Stop and What Can Be Done About It?" (1985),
   for systems; Jim Shore, ["Fail Fast"](https://martinfowler.com/ieeeSoftware/failFast.pdf),
   *IEEE Software* (2004), for code.
