@@ -6,7 +6,6 @@ it at the rules for every stage, one folder up. The stage rules are skills, one 
 per stage next to it, loaded when needed.
 
 @../way_of_working.md
-@skills.md
 
 ## Claude-specific rules
 

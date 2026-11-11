@@ -18,10 +18,11 @@ together, from requirements to maintenance.
   not loaded.
 - **One folder per assistant** holds only what that assistant needs on top: for Claude,
   [`claude/CLAUDE.md`](claude/CLAUDE.md), which loads `way_of_working.md`, and
-  [`claude/skills.md`](claude/skills.md), the library of review skills in regular use.
+  [`claude/skills.md`](claude/skills.md), the library of review skills in regular use, read
+  when the review skill links to it, not loaded in every conversation.
 - **Use in a project:** as a git submodule at `.claude/skills`; the steps are in
   [`claude/CLAUDE.md`](claude/CLAUDE.md).
-- **Size:** about 110 lines are loaded in every conversation (`way_of_working.md` and the
+- **Size:** about 95 lines are loaded in every conversation (`way_of_working.md` and the
   Claude files); each stage skill adds 15 to 112 lines when it's needed. Claude Code's
   guidance is to keep instruction files under about 200 lines each.
 
