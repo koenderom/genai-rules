@@ -10,7 +10,7 @@ are installed per project in `.claude/skills/<name>/SKILL.md`, or for all projec
 
 | Skill or agent | What it does | When | Source |
 |---|---|---|---|
-| clean-code | Reviews for readability: names, small functions, clear structure, error handling (after Robert C. Martin's *Clean Code*) | own review of every change | [ClawForge](https://github.com/jackjin1997/ClawForge) |
+| clean-code | Reviews for readability: names, small functions, comments, error handling, tests, code smells (after Robert C. Martin's *Clean Code*), with a 0-10 score and detailed references loaded on demand | own review of every change | [wondelai/skills](https://github.com/wondelai/skills) (MIT); copied in, [`clean-code/`](../clean-code/SOURCE.md) |
 | python-best-practices | Reviews Python for current idioms: type hints, data classes, packaging, testing | own review of Python changes | [awesome-claude-code-toolkit](https://github.com/rohitg00/awesome-claude-code-toolkit) (Apache-2.0); copied in, [`python-best-practices/`](../python-best-practices/SOURCE.md) |
 | code-reviewer | Checks a change against the project's guidelines and for bugs | own review of every change | Anthropic's pr-review-toolkit ([claude-code plugins](https://github.com/anthropics/claude-code)) |
 | silent-failure-hunter | Finds errors that are caught and dropped without a trace | changes with error handling | Anthropic's pr-review-toolkit |
