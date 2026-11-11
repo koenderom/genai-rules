@@ -60,10 +60,9 @@ How every change is checked before it counts as done.
     are fetched again right before answering. When replies in the threads aren't
     possible, the answers go in one comment on the pull request, each quoting the remark
     it answers.
-    - **Each question is answered once, as close to it as possible:** a question in a
-      pull request is answered in its thread, a question in the chat in the chat. The
-      chat report doesn't repeat what the threads already say, so nothing needs reading
-      twice to be sure nothing was missed.
+    - **Each question is answered once:** a question in the chat is answered in the
+      chat, and the chat report doesn't repeat what the threads already say, so nothing
+      needs reading twice to be sure nothing was missed.
 14. **A comment about one place is applied everywhere it applies** (way of working, rule 5).
 15. **No rewriting of history under review:** no force-push to a pull request being
     reviewed; bring it up to date by merging the main branch into it.
