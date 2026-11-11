@@ -24,6 +24,10 @@ stages, in this order; each stage has its own rules:
    abbreviation that isn't obvious to any reader.
 5. **A remark about one place is a rule for every place it applies.** Find the other
    places and change them the same way.
+   - **A change matches the style of the file it changes,** so the project stays
+     consistent.
+   - **Minimal diff:** a change touches only what it needs to, unless another rule asks
+     for more: this one, or the boy-scout rule (maintenance rules).
 6. **Say what wasn't verified.** Work is reported as done only when it is; anything only
    partly checked is named as such.
    - **No guess presented as a fact:** a claim ("works for every site") is checked on

@@ -102,3 +102,5 @@ When two goals pull in different directions, the higher one wins.
 19. **Idempotence:** running the same operation twice gives the same result as once. A
     repeated run updates instead of duplicating, sends a notification once, and can be
     restarted safely after a failure partway.
+20. **Choosing among many options:** score each against the requirements and against
+    the goals and rules here, and propose only the best.

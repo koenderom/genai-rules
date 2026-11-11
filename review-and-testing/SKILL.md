@@ -71,8 +71,9 @@ How every change is checked before it counts as done.
 ### After the merge
 
 17. **Check the main branch after every round of merges:** all tests, and a real run.
-18. **Check every pull request, merged ones too, for unanswered comments;** answers about
-    merged pull requests go in the conversation with the owner.
+18. **Check every pull request, merged ones too, for unanswered comments,** and answer
+    them in their threads (rule 13). Check too that each merged pull request took its
+    branch's last commit; commits that missed the merge go into a new pull request.
 
 ## Testing
 
@@ -92,6 +93,8 @@ How every change is checked before it counts as done.
     - **repeatable:** the same result every time, anywhere: no network, no real clock, no
       random input without a fixed seed;
     - **self-validating:** each test passes or fails, with nothing to inspect by hand;
+    - **close to the real run:** tests and checks use the same entry points, settings and
+      kind of data as the program in use, so a pass means the real run works too.
 23. **A bug gets a failing test first:** reproduce it in a test that fails, then fix the
     code until the test passes. The test stays, so the same bug is found only once.
 24. **Every check runs automatically on every change, and gives the same result every
