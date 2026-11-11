@@ -38,10 +38,11 @@ each function.
 ## Comments
 
 10. **Comment only where it adds something: the intent and the algorithm, not the
-    mechanics.** Never rephrase what the code says clearly; with nothing non-obvious to
-    add, there is no comment. What a caller needs to know
-    is stated: preconditions, the result when it fails, side effects. An assumption is
-    an unwritten precondition: write it down as one.
+    mechanics.** Never rephrase what the code says clearly.
+    - With nothing non-obvious to add, there is no comment.
+    - What a caller needs to know is stated: preconditions, the result when it fails,
+      side effects.
+    - An assumption is an unwritten precondition: write it down as one.
 11. **Every file starts with its purpose.** No workflow, phase or history information in
     source files.
 12. **Written for a human reader who doesn't know the code yet:** define a term before
