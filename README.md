@@ -21,3 +21,9 @@ together, from requirements to maintenance.
 - **Size:** about 110 lines are loaded in every conversation (`way_of_working.md` and the
   Claude files); each stage skill adds 15 to 112 lines when it's needed. Claude Code's
   guidance is to keep instruction files under about 200 lines each.
+
+## License
+
+[CC BY 4.0](LICENSE): free to use, share and adapt, also commercially, as long as you give
+credit. For example: "Based on genai-rules by Koen Derom
+(https://github.com/koenderom/genai-rules), CC BY 4.0", stating whether you changed it.
