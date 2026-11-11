@@ -56,8 +56,8 @@ goes through seven stages, in this order; each stage has its own skill:
      there and returns only its conclusion.
 10. **A change matches the style of the file it changes,** so the project stays
     consistent.
-    - **Minimal diff:** a change touches only what it needs to, unless another rule asks
-      for more: rule 5, or the boy-scout rule (maintenance rules).
+11. **Minimal diff:** a change touches only what it needs to, unless another rule asks for
+    more: rule 5, or the boy-scout rule (maintenance rules).
 
 ## The stage skills
 
