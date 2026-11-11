@@ -11,6 +11,9 @@ together, from requirements to maintenance.
   its stage. A skill stands on its own, or through a reference to a shared part; nothing
   is written twice. The folders sit at the top level, so the repository works as a
   project's `.claude/skills/`, as `~/.claude/skills/`, or as a plugin.
+- **Third-party skills, one folder each,** copied in so they come along in every project:
+  `clean-code/`, `python-best-practices/`. Each folder keeps its own license, and a `SOURCE.md` with
+  where it comes from and how to update it.
 - **[`SOURCES.md`](SOURCES.md):** where the named principles come from. For the reader;
   not loaded.
 - **One folder per assistant** holds only what that assistant needs on top: for Claude,
@@ -30,3 +33,9 @@ together, from requirements to maintenance.
   simplifying after a feature works, ...), and four skills that apply them. A source of
   inspiration for these rules: where its principles meet them, [`SOURCES.md`](SOURCES.md)
   says so.
+
+## License
+
+[CC BY 4.0](LICENSE): free to use, share and adapt, also commercially, as long as you give
+credit. For example: "Based on genai-rules by Koen Derom
+(https://github.com/koenderom/genai-rules), CC BY 4.0", stating whether you changed it.

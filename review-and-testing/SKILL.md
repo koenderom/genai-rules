@@ -31,7 +31,9 @@ How every change is checked before it counts as done.
      and linters (in Python, e.g. ruff), configured in the project and run on every
      change. The reviewer's attention goes to what tools can't judge.
 6. **Run the review skills on the changed files** ([skills](../claude/skills.md));
-   fix each finding, or say in the description why it stays.
+   fix each finding, or say in the description why it stays. These rules win where a
+   review skill disagrees: e.g. no line count for functions (implementation rule 20), not
+   clean-code's "ideally 4-6 lines".
 7. **Look for the same problem elsewhere** and fix it in the same way.
 8. **Measure what the change does to the results,** when it affects them: run before
    and after on a representative real data set, and report the difference.
