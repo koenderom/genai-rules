@@ -1,7 +1,7 @@
-# Rules for building software with a generative AI assistant
+# Rules for working with a generative AI assistant
 
-Project-agnostic rules for how an AI assistant and a project's owner build software
-together, from requirements to maintenance.
+Generic rules for interacting with an AI assistant, in any conversation, and for
+building software with one, from requirements to maintenance.
 
 - **[`ai_chat_rules.md`](ai_chat_rules.md):** rules for AI chat assistants: how the
   assistant answers, in any conversation. Not tied to software: usable on its own as the
@@ -17,8 +17,8 @@ together, from requirements to maintenance.
 - **Third-party skills, one folder each,** copied in so they come along in every project:
   `clean-code/`, `python-best-practices/`. Each folder keeps its own license, and a `SOURCE.md` with
   where it comes from and how to update it.
-- **[`SOURCES.md`](SOURCES.md):** where the named principles come from. For the reader;
-  not loaded.
+- **[`SOURCES.md`](SOURCES.md):** where the named principles come from, and related work.
+  For the reader; not loaded.
 - **One folder per assistant** holds only what that assistant needs on top: for Claude,
   [`claude/CLAUDE.md`](claude/CLAUDE.md), which loads `ai_chat_rules.md` and
   `way_of_working.md`, and [`claude/skills.md`](claude/skills.md), the library of review
@@ -26,18 +26,6 @@ together, from requirements to maintenance.
   conversation.
 - **Use in a project:** as a git submodule at `.claude/skills`; the steps are in
   [`claude/CLAUDE.md`](claude/CLAUDE.md).
-- **Size:** about 135 lines are loaded in every conversation (`ai_chat_rules.md`,
-  `way_of_working.md` and the Claude files); each stage skill adds 15 to 112 lines when it's needed. Claude Code's
-  guidance is to keep instruction files under about 200 lines each.
-
-## Related work
-
-- **[Constructive Programming Manifesto (CPM)](https://github.com/cosmin-ionescu-caa/CPM)**
-  by Cosmin Ionescu (CC BY 4.0): eleven principles for shaping software deliberately
-  (disciplined flexibility, fixing problems at the source, preventing errors by design,
-  simplifying after a feature works, ...), and four skills that apply them. A source of
-  inspiration for these rules: where its principles meet them, [`SOURCES.md`](SOURCES.md)
-  says so.
 
 ## License
 

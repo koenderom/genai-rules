@@ -2,7 +2,7 @@
 
 How the assistant and the project's owner build software together. How the assistant
 answers, in any conversation, is in [`ai_chat_rules.md`](ai_chat_rules.md). The work
-goes through seven stages, in this order; each stage has its own rules:
+goes through seven stages, in this order; each stage has its own skill:
 
 1. [Requirements](requirements/SKILL.md)
 2. [Planning and tracking](planning-and-tracking/SKILL.md)
@@ -36,8 +36,7 @@ goes through seven stages, in this order; each stage has its own rules:
    here, even while only one project uses it; one tied to a single project lives in that
    project.
 8. **One language per project, used consistently in every stage:** requirements, code,
-   documents, commit messages and pull requests. Answers in a conversation follow the
-   language of the question (`ai_chat_rules.md`).
+   documents, commit messages and pull requests.
 9. **Keep the working context small, to save tokens:** compress it regularly, or start a
    new conversation when a task is done.
    - Always under the owner's control: proposed, never done without telling the owner.
@@ -55,16 +54,13 @@ goes through seven stages, in this order; each stage has its own rules:
      tools put into that session's context.
    - **Exploration in a helper agent,** where the assistant has one: a broad search runs
      there and returns only its conclusion.
-   - **Short instruction files:** under about 200 lines each. Splitting them into imported
-     files doesn't save anything: imports are loaded in full. Rules needed in one stage
-     only are a skill instead, loaded when that stage's work starts.
 
-## The stage rules, as skills
+## The stage skills
 
-- Each stage's rules are a skill: the assistant loads them when a task belongs to that
-  stage (each skill's description says when), or when the owner calls the skill by name.
+- The assistant loads a stage skill when a task belongs to that stage (each skill's
+  description says when), or when the owner calls the skill by name.
 - This file and `ai_chat_rules.md` are the only ones loaded in every conversation; the
-  stage rules load only when they're needed, which keeps the working context small
+  stage skills load only when they're needed, which keeps the working context small
   (rule 9).
 
 ## The rules in a project

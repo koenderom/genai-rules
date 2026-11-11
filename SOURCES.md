@@ -5,7 +5,10 @@ reader, not the assistant: this file isn't loaded with the rules.
 
 - **Constructive Programming Manifesto (CPM):** Cosmin Ionescu,
   [github.com/cosmin-ionescu-caa/CPM](https://github.com/cosmin-ionescu-caa/CPM) (CC BY
-  4.0). Its principles come back below, where they meet a rule of these.
+  4.0): eleven principles for shaping software deliberately (disciplined flexibility,
+  fixing problems at the source, preventing errors by design, simplifying after a feature
+  works, ...), and four skills that apply them. A source of inspiration for these rules:
+  its principles come back below, where they meet a rule of these.
 
 ## AI chat rules
 
