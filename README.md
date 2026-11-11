@@ -21,9 +21,9 @@ together, from requirements to maintenance.
   not loaded.
 - **One folder per assistant** holds only what that assistant needs on top: for Claude,
   [`claude/CLAUDE.md`](claude/CLAUDE.md), which loads `ai_chat_rules.md` and
-  `way_of_working.md`, and
-  [`claude/skills.md`](claude/skills.md), the library of review skills in regular use, read
-  when the review skill links to it, not loaded in every conversation.
+  `way_of_working.md`, and [`claude/skills.md`](claude/skills.md), the library of review
+  skills in regular use, read when the review skill links to it, not loaded in every
+  conversation.
 - **Use in a project:** as a git submodule at `.claude/skills`; the steps are in
   [`claude/CLAUDE.md`](claude/CLAUDE.md).
 - **Size:** about 135 lines are loaded in every conversation (`ai_chat_rules.md`,
