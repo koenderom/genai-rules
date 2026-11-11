@@ -27,7 +27,6 @@ together, from requirements to maintenance.
 - **[Constructive Programming Manifesto (CPM)](https://github.com/cosmin-ionescu-caa/CPM)**
   by Cosmin Ionescu (CC BY 4.0): eleven principles for shaping software deliberately
   (disciplined flexibility, fixing problems at the source, preventing errors by design,
-  simplifying after a feature works, ...), and four skills that apply them: a compact
-  language for task briefs and its executor, debugging, and constructive review. Where its
-  principles meet these rules, [`SOURCES.md`](SOURCES.md) says so; its skills are in the
-  skills library ([`claude/skills.md`](claude/skills.md)).
+  simplifying after a feature works, ...), and four skills that apply them. A source of
+  inspiration for these rules: where its principles meet them, [`SOURCES.md`](SOURCES.md)
+  says so.
