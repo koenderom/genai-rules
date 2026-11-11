@@ -117,3 +117,7 @@ each function.
     tested (code that talks to an outside system: at least one real run) or removed.
 31. **One-off work isn't kept:** a data migration or repair runs once, as a script outside
     the repository; its code and tests don't stay.
+32. **A commit message says only what the code doesn't:** why the change was made, the
+    problem it solves or the function it improves, and how it relates to other changes.
+    As short as it can be while still understood, and never longer than the change
+    itself.
