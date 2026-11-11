@@ -1,8 +1,8 @@
 # Way of working
 
 How the assistant and the project's owner build software together. How the assistant
-answers, in any conversation, is in [`answers.md`](answers.md). The work goes through
-seven stages, in this order; each stage has its own rules:
+answers, in any conversation, is in [`ai_chat_rules.md`](ai_chat_rules.md). The work
+goes through seven stages, in this order; each stage has its own rules:
 
 1. [Requirements](requirements/SKILL.md)
 2. [Planning and tracking](planning-and-tracking/SKILL.md)
@@ -35,7 +35,7 @@ seven stages, in this order; each stage has its own rules:
    Skills all live here, a project's own skills included.
 8. **One language per project, used consistently in every stage:** requirements, code,
    documents, commit messages and pull requests. Answers in a conversation follow the
-   language of the question (`answers.md`).
+   language of the question (`ai_chat_rules.md`).
 9. **Keep the working context small, to save tokens:** compress it regularly, or start a
    new conversation when a task is done.
    - Always under the owner's control: proposed, never done without telling the owner.
@@ -61,8 +61,9 @@ seven stages, in this order; each stage has its own rules:
 
 - Each stage's rules are a skill: the assistant loads them when a task belongs to that
   stage (each skill's description says when), or when the owner calls the skill by name.
-- This file and `answers.md` are the only ones loaded in every conversation; the stage
-  rules load only when they're needed, which keeps the working context small (rule 9).
+- This file and `ai_chat_rules.md` are the only ones loaded in every conversation; the
+  stage rules load only when they're needed, which keeps the working context small
+  (rule 9).
 
 ## The rules in a project
 

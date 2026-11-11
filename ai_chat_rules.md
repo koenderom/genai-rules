@@ -1,4 +1,4 @@
-# How the assistant answers
+# Rules for AI chat assistants
 
 Rules for every conversation with an AI assistant, about anything: not tied to software
 or to a project. Usable on their own, e.g. as the custom instructions or memory of any

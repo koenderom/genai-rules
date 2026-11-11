@@ -3,9 +3,9 @@
 Project-agnostic rules for how an AI assistant and a project's owner build software
 together, from requirements to maintenance.
 
-- **[`answers.md`](answers.md):** how the assistant answers, in any conversation. Not
-  tied to software: usable on its own as the instructions or memory of any chat
-  assistant.
+- **[`ai_chat_rules.md`](ai_chat_rules.md):** rules for AI chat assistants: how the
+  assistant answers, in any conversation. Not tied to software: usable on its own as the
+  instructions or memory of any chat assistant.
 - **[`way_of_working.md`](way_of_working.md):** the rules for every stage of building
   software, and the list of stages. Both files are loaded in every conversation.
 - **One folder per stage, each a skill:** `requirements/`, `planning-and-tracking/`,
@@ -20,12 +20,13 @@ together, from requirements to maintenance.
 - **[`SOURCES.md`](SOURCES.md):** where the named principles come from. For the reader;
   not loaded.
 - **One folder per assistant** holds only what that assistant needs on top: for Claude,
-  [`claude/CLAUDE.md`](claude/CLAUDE.md), which loads `answers.md` and `way_of_working.md`, and
+  [`claude/CLAUDE.md`](claude/CLAUDE.md), which loads `ai_chat_rules.md` and
+  `way_of_working.md`, and
   [`claude/skills.md`](claude/skills.md), the library of review skills in regular use, read
   when the review skill links to it, not loaded in every conversation.
 - **Use in a project:** as a git submodule at `.claude/skills`; the steps are in
   [`claude/CLAUDE.md`](claude/CLAUDE.md).
-- **Size:** about 135 lines are loaded in every conversation (`answers.md`,
+- **Size:** about 135 lines are loaded in every conversation (`ai_chat_rules.md`,
   `way_of_working.md` and the Claude files); each stage skill adds 15 to 112 lines when it's needed. Claude Code's
   guidance is to keep instruction files under about 200 lines each.
 
