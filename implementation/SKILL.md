@@ -26,8 +26,8 @@ each function.
    process, registry.
 5. **One concept, one name, everywhere:** code, configuration keys, documents, tests,
    messages. One word per concept, one concept per word.
-6. **A name says what the value is, including its criterion:** "highest score first",
-   not "best first".
+6. **A name says exactly what the value is or what the function does, including its
+   criterion:** "highest score first", not "best first".
 7. **Names follow the language's usual hints,** part of its idioms (in Python: `is_` for
    a yes/no answer, `iter_` for an iterator, `to_` for a conversion).
 8. **A name never disagrees with what it holds, and doesn't encode the type** (no `_list`
@@ -38,9 +38,11 @@ each function.
 ## Comments
 
 10. **Comment only where it adds something: the intent and the algorithm, not the
-    mechanics.** Never rephrase what the code says clearly. What a caller needs to know
-    is stated: preconditions, the result when it fails, side effects. An assumption is
-    an unwritten precondition: write it down as one.
+    mechanics.** Never rephrase what the code says clearly.
+    - With nothing non-obvious to add, there is no comment.
+    - What a caller needs to know is stated: preconditions, the result when it fails,
+      side effects.
+    - An assumption is an unwritten precondition: write it down as one.
 11. **Every file starts with its purpose.** No workflow, phase or history information in
     source files.
 12. **Written for a human reader who doesn't know the code yet:** define a term before
@@ -111,10 +113,12 @@ each function.
 
 ## Changes and tests
 
-29. **One subject per change, in small steps.** A change that needs another one merged
-    first says so in its title ("merge after ...").
+29. **One subject per change, in small steps.** Unrelated changes go in separate
+    commits, so each is reviewed on its own. A change that needs another one merged first
+    says so in its title ("merge after ...").
 30. **Code and its tests are written together.** Untested code doesn't exist: it gets
     tested (code that talks to an outside system: at least one real run) or removed.
+    Unused code doesn't exist either: a new function is called in the same change.
 31. **One-off work isn't kept:** a data migration or repair runs once, as a script outside
     the repository; its code and tests don't stay.
 32. **A commit message says only what the code doesn't:** why the change was made, the

@@ -54,6 +54,10 @@ goes through seven stages, in this order; each stage has its own skill:
      tools put into that session's context.
    - **Exploration in a helper agent,** where the assistant has one: a broad search runs
      there and returns only its conclusion.
+10. **A change matches the style of the file it changes,** so the project stays
+    consistent.
+11. **Minimal diff:** a change touches only what it needs to, unless another rule asks for
+    more: rule 5, or the boy-scout rule (maintenance rules).
 
 ## The stage skills
 
