@@ -3,6 +3,10 @@
 Where the named principles in the rules come from, for the full reasoning. For the
 reader, not the assistant: this file isn't loaded with the rules.
 
+- **Constructive Programming Manifesto (CPM):** Cosmin Ionescu,
+  [github.com/cosmin-ionescu-caa/CPM](https://github.com/cosmin-ionescu-caa/CPM) (CC BY
+  4.0). Its principles come back below, where they meet a rule of these.
+
 ## Architecture and design
 
 - **Simplicity (KISS):** first noted by the U.S. Navy in 1960; associated with Kelly
@@ -36,12 +40,12 @@ reader, not the assistant: this file isn't loaded with the rules.
   ["Functional Core, Imperative Shell"](https://www.destroyallsoftware.com/screencasts/catalog/functional-core-imperative-shell)
   (screencast) and ["Boundaries"](https://www.destroyallsoftware.com/talks/boundaries)
   (talk, SCNA 2012).
-- **Make illegal states unrepresentable:** Yaron Minsky, "Effective ML" (lecture at
-  Harvard, 2010; see his
-  ["Effective ML Revisited"](https://blog.janestreet.com/effective-ml-revisited/));
-  **parse, don't validate:** Alexis King,
-  ["Parse, don't validate"](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)
-  (2019).
+- **Make illegal states unrepresentable:** also CPM principles 7 ("Prevent by design,
+  check at boundaries") and 8 ("Make the right path the easy path"). Yaron Minsky,
+  "Effective ML" (lecture at Harvard, 2010; see his ["Effective ML
+  Revisited"](https://blog.janestreet.com/effective-ml-revisited/)); **parse, don't
+  validate:** Alexis King, ["Parse, don't
+  validate"](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/) (2019).
 - **Robustness principle:** Jon Postel, in the TCP specification,
   [RFC 761](https://www.rfc-editor.org/rfc/rfc761) (1980).
 - **Idempotence:** a term from mathematics; for operations that may be repeated, see the
@@ -64,9 +68,10 @@ reader, not the assistant: this file isn't loaded with the rules.
 - **No global or shared mutable state:** Andrew Hunt and David Thomas, *The Pragmatic
   Programmer*, 20th anniversary edition (2019), tips 47 ("Avoid Global Data"), 48, 50
   ("Don't Hoard State; Pass It Around") and 57 ("Shared State Is Incorrect State").
-- **Fail fast:** Jim Gray, "Why Do Computers Stop and What Can Be Done About It?" (1985),
-  for systems; Jim Shore, ["Fail Fast"](https://martinfowler.com/ieeeSoftware/failFast.pdf),
-  *IEEE Software* (2004), for code.
+- **Fail fast:** also CPM principle 6 ("Fix problems early and at the source"). Jim Gray,
+  "Why Do Computers Stop and What Can Be Done About It?" (1985), for systems; Jim Shore,
+  ["Fail Fast"](https://martinfowler.com/ieeeSoftware/failFast.pdf), *IEEE Software*
+  (2004), for code.
 
 ## Review and testing
 

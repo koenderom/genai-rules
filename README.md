@@ -25,6 +25,15 @@ together, from requirements to maintenance.
   Claude files); each stage skill adds 15 to 112 lines when it's needed. Claude Code's
   guidance is to keep instruction files under about 200 lines each.
 
+## Related work
+
+- **[Constructive Programming Manifesto (CPM)](https://github.com/cosmin-ionescu-caa/CPM)**
+  by Cosmin Ionescu (CC BY 4.0): eleven principles for shaping software deliberately
+  (disciplined flexibility, fixing problems at the source, preventing errors by design,
+  simplifying after a feature works, ...), and four skills that apply them. A source of
+  inspiration for these rules: where its principles meet them, [`SOURCES.md`](SOURCES.md)
+  says so.
+
 ## License
 
 [CC BY 4.0](LICENSE): free to use, share and adapt, also commercially, as long as you give
