@@ -32,7 +32,9 @@ goes through seven stages, in this order; each stage has its own rules:
      threshold) says so, or is left out.
 7. **Rules stay project-agnostic here.** A rule that holds for one project only is one of
    that project's non-functional requirements, kept in the project (requirements rules).
-   Skills all live here, a project's own skills included.
+   The same goes for skills: one that carries over to other projects by its nature lives
+   here, even while only one project uses it; one tied to a single project lives in that
+   project.
 8. **One language per project, used consistently in every stage:** requirements, code,
    documents, commit messages and pull requests. Answers in a conversation follow the
    language of the question (`ai_chat_rules.md`).
