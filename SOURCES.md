@@ -9,10 +9,9 @@ reader, not the assistant: this file isn't loaded with the rules.
 
 ## AI chat rules
 
-- **Writing style:** ASD-STE100, *Simplified Technical English: International
-  specification for the preparation of technical documentation in a controlled language*,
-  Issue 9 (15 January 2025), ASD (AeroSpace, Security and Defence Industries Association
-  of Europe); [asd-ste100.org](https://www.asd-ste100.org).
+- **Writing style:** *ASD-STE100 Simplified Technical English, Standard for Technical
+  Documentation*, Issue 9 (15 January 2025), ASD (Aerospace, Security and Defence
+  Industries Association of Europe); [asd-ste100.org](https://www.asd-ste100.org).
 
 ## Architecture and design
 

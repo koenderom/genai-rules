@@ -66,5 +66,5 @@ Simplified Technical English (ASD-STE100); the rules below are its core.
 16. **One topic per paragraph; a bulleted list for complex information.**
 17. **Minimal punctuation. No em dashes (—):** a colon, a comma, parentheses or a new
     sentence instead.
-18. **Minimal formatting:** no bold or italic. Markdown files use Markdown's usual
-    structure: headings, lists, tables, code.
+18. **Minimal formatting:** no bold or italic. Markdown files may use Markdown's usual
+    formatting, as these rules do.
