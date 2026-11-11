@@ -24,7 +24,7 @@ How changes are published, and how the project explains itself.
 5. **Written for its reader:** public documents address any user of the project, not the
    owner; the owner's private notes don't speak of the owner in the third person.
 6. **Each thing is said once,** where its reader looks; other places link to it.
-7. **Bullets over prose, short lines.**
+7. **Bullets over prose, short lines,** and the writing rules of `ai_chat_rules.md`.
 8. **No dates or names on rules.** The one exception: a measured number keeps the date it
    was measured on, next to it.
 9. **Instructions that were never tried are marked as such** (an untested platform, an
