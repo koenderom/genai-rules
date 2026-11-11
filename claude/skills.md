@@ -4,13 +4,14 @@ Skills and review agents in regular use with Claude Code, and when to use them. 
 are installed per project in `.claude/skills/<name>/SKILL.md`, or for all projects in
 `~/.claude/skills/`.
 
-- The files themselves aren't copied here: their sources state no license, so they may
-  not be republished. Each line links to where the skill comes from.
+- Each line links to where the skill comes from. Skills whose license allows it are
+  copied into this repository (one folder each), so they come along in every project;
+  the others are installed per project or user-wide.
 
 | Skill or agent | What it does | When | Source |
 |---|---|---|---|
 | clean-code | Reviews for readability: names, small functions, clear structure, error handling (after Robert C. Martin's *Clean Code*) | own review of every change | [ClawForge](https://github.com/jackjin1997/ClawForge) |
-| python-best-practices | Reviews Python for current idioms: type hints, data classes, packaging, testing | own review of Python changes | origin not recorded: to trace |
+| python-best-practices | Reviews Python for current idioms: type hints, data classes, packaging, testing | own review of Python changes | [awesome-claude-code-toolkit](https://github.com/rohitg00/awesome-claude-code-toolkit) (Apache-2.0); copied in, [`python-best-practices/`](../python-best-practices/SOURCE.md) |
 | code-reviewer | Checks a change against the project's guidelines and for bugs | own review of every change | Anthropic's pr-review-toolkit ([claude-code plugins](https://github.com/anthropics/claude-code)) |
 | silent-failure-hunter | Finds errors that are caught and dropped without a trace | changes with error handling | Anthropic's pr-review-toolkit |
 | comment-analyzer | Checks comments for accuracy and lasting value | changes with comments or docstrings | Anthropic's pr-review-toolkit |
