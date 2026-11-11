@@ -7,6 +7,13 @@ reader, not the assistant: this file isn't loaded with the rules.
   [github.com/cosmin-ionescu-caa/CPM](https://github.com/cosmin-ionescu-caa/CPM) (CC BY
   4.0). Its principles come back below, where they meet a rule of these.
 
+## AI chat rules
+
+- **Writing style:** ASD-STE100, *Simplified Technical English: International
+  specification for the preparation of technical documentation in a controlled language*,
+  Issue 9 (15 January 2025), ASD (AeroSpace, Security and Defence Industries Association
+  of Europe); [asd-ste100.org](https://www.asd-ste100.org).
+
 ## Architecture and design
 
 - **Simplicity (KISS):** first noted by the U.S. Navy in 1960; associated with Kelly
