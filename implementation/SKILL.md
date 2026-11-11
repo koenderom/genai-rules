@@ -77,6 +77,10 @@ each function.
 20. **One level of abstraction per function:** its lines are all at the same level, so a
     top-level function reads like a summary, and the details sit in the functions it
     calls.
+    - **No line count:** a function's length follows from doing one thing at one level,
+      not from a target. It's split where it does a second thing or a reader loses the
+      thread, not to reach a number of lines. This overrides the clean-code skill's
+      "ideally 4-6 lines": splitting further scatters one idea over many small functions.
 21. **No duplicated code: each operation is written once, and reused wherever it's
     needed,** so a fix lands everywhere and a reader recognises the operation by its name.
     No duplication takes priority over other rules.
