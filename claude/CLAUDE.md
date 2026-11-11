@@ -5,6 +5,7 @@ loads only `CLAUDE.md`, `AGENTS.md` and `.claude/rules/` files by itself; this f
 it at the rules for every stage, one folder up. The stage rules are skills, one folder
 per stage next to it, loaded when needed.
 
+@../answers.md
 @../way_of_working.md
 
 ## Claude-specific rules
