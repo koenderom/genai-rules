@@ -21,3 +21,13 @@ together, from requirements to maintenance.
 - **Size:** about 110 lines are loaded in every conversation (`way_of_working.md` and the
   Claude files); each stage skill adds 15 to 112 lines when it's needed. Claude Code's
   guidance is to keep instruction files under about 200 lines each.
+
+## Related work
+
+- **[Constructive Programming Manifesto (CPM)](https://github.com/cosmin-ionescu-caa/CPM)**
+  by Cosmin Ionescu (CC BY 4.0): eleven principles for shaping software deliberately
+  (disciplined flexibility, fixing problems at the source, preventing errors by design,
+  simplifying after a feature works, ...), and four skills that apply them: a compact
+  language for task briefs and its executor, debugging, and constructive review. Where its
+  principles meet these rules, [`SOURCES.md`](SOURCES.md) says so; its skills are in the
+  skills library ([`claude/skills.md`](claude/skills.md)).
