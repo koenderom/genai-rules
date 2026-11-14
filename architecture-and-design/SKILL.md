@@ -17,6 +17,21 @@ When two goals pull in different directions, the higher one wins.
    another.
 3. **Readable and reviewable** by a human who doesn't know it yet.
 
+## No code before the design is approved
+
+A change that adds or moves a part (module, file, data format, configuration section,
+dependency), or changes how parts work together, starts with a design proposal for the
+owner:
+- the parts and the responsibility of each;
+- the interfaces between them;
+- where data and configuration live;
+- what changes in existing code;
+- the alternatives considered.
+
+Code starts once the owner approves. Rework after a review counts too: a remark that
+changes the structure goes back to this stage. A change inside one function needs no
+proposal.
+
 ## Rules
 
 1. **Don't reinvent the wheel.** Before designing a component, look for the mature,

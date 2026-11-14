@@ -8,6 +8,9 @@ description: Rules for writing code. Use whenever code, tests or code comments a
 How the code is written. The architecture and design rules apply here too, at the level of
 each function.
 
+Code is written only after its design is approved (architecture and design: "No code
+before the design is approved").
+
 ## Simplicity
 
 1. **Simplicity beats cleverness:** the version a reader follows at first sight wins, even
