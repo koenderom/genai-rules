@@ -69,11 +69,15 @@ goes through seven stages, in this order; each stage has its own skill:
 
 ## The rules in a project
 
-- The rules repository is added to the project as a git submodule, at the place where
-  the assistant looks for skills, so every stage skill is found without copies or links.
-  The assistant's own folder says how (for Claude: [`claude/CLAUDE.md`](claude/CLAUDE.md)).
-- Which way a project uses (this submodule, one copy for all of the owner's projects, or
-  an assistant's plugin) is decided with its requirements.
+- The rules stand on their own: they're the owner's way of working with an assistant,
+  not part of any project. A project's repository neither contains nor mentions them,
+  and its documents (contributing rules included) are written without them.
+- They're installed once per owner, where the assistant looks for rules and skills in
+  every project. The assistant's own folder says how (for Claude:
+  [`claude/CLAUDE.md`](claude/CLAUDE.md)).
+- A project that wants the rules in its own repository (a team sharing this way of
+  working) can add them as a git submodule; that's the project's choice, made with its
+  requirements.
 
 ## Still to discuss
 
