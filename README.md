@@ -24,7 +24,8 @@ building software with one, from requirements to maintenance.
   `way_of_working.md`, and [`claude/skills.md`](claude/skills.md), the library of review
   skills in regular use, read when the review skill links to it, not loaded in every
   conversation.
-- **Use in a project:** as a git submodule at `.claude/skills`; the steps are in
+- **Stands on its own:** checked out under each project that uses it, while the
+  project's repository neither contains nor mentions it. The steps are in
   [`claude/CLAUDE.md`](claude/CLAUDE.md).
 
 ## License

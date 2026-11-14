@@ -67,13 +67,14 @@ goes through seven stages, in this order; each stage has its own skill:
   stage skills load only when they're needed, which keeps the working context small
   (rule 9).
 
-## The rules in a project
+## Using the rules in a project
 
-- The rules repository is added to the project as a git submodule, at the place where
-  the assistant looks for skills, so every stage skill is found without copies or links.
-  The assistant's own folder says how (for Claude: [`claude/CLAUDE.md`](claude/CLAUDE.md)).
-- Which way a project uses (this submodule, one copy for all of the owner's projects, or
-  an assistant's plugin) is decided with its requirements.
+- The rules stand on their own: they're the owner's way of working with an assistant,
+  not part of any project. A project's repository doesn't contain them, and its code
+  and documents (contributing rules included) don't depend on them or refer to them.
+- They're checked out under each project, where the assistant looks for rules and
+  skills, and kept out of the project's repository. The assistant's own folder says how
+  (for Claude: [`claude/CLAUDE.md`](claude/CLAUDE.md)).
 
 ## Still to discuss
 

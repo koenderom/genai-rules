@@ -1,8 +1,8 @@
 # Claude
 
-Imported by a project's own `CLAUDE.md` (`@.claude/skills/claude/CLAUDE.md`). Claude Code
-loads only `CLAUDE.md`, `AGENTS.md` and `.claude/rules/` files by itself; this file points
-it at the rules for every stage, one folder up. The stage skills are one folder per
+Imported by the project's `CLAUDE.local.md` (`@.claude/skills/claude/CLAUDE.md`). Claude
+Code loads only `CLAUDE.md`, `CLAUDE.local.md`, `AGENTS.md` and `.claude/rules/` files by
+itself; this file points it at the rules for every stage, one folder up. The stage skills are one folder per
 stage next to it, loaded when needed.
 
 @../ai_chat_rules.md
@@ -10,14 +10,17 @@ stage next to it, loaded when needed.
 
 ## Claude-specific rules
 
-1. **The rules repository is a git submodule at `.claude/skills`** in every project that
-   uses it:
-   - add it once: `git submodule add <repository URL> .claude/skills`;
-   - the project's own `CLAUDE.md` gets one line: `@.claude/skills/claude/CLAUDE.md`;
-   - clone the project with `git clone --recurse-submodules`; take a newer version of the
-     rules with `git submodule update --remote .claude/skills`.
-   - Why there: Claude Code finds a skill only as a direct subfolder of `.claude/skills/`
-     holding a `SKILL.md`. The submodule needs no symbolic links, so it works on Windows
-     without Developer Mode.
-   - The other ways, if the project's requirements choose them: a clone at
-     `~/.claude/skills` (one copy for all projects), or a Claude Code plugin.
+1. **The rules repository is checked out under each project, at `.claude/skills`,**
+   as a plain clone, invisible to the project's own git:
+   - clone it once, from the project's folder:
+     `git clone <repository URL> .claude/skills`;
+   - a `CLAUDE.local.md` in the project's folder gets one line:
+     `@.claude/skills/claude/CLAUDE.md`;
+   - both go in the project's `.git/info/exclude`, git's own exclude list, which is
+     never committed: `.claude/` and `CLAUDE.local.md`. Not in `.gitignore`, which
+     the project's repository shows;
+   - take a newer version of the rules with `git -C .claude/skills pull`.
+   - Why there: Claude Code finds a skill as a direct subfolder of the project's
+     `.claude/skills/` holding a `SKILL.md`, and reads `CLAUDE.local.md` as the
+     user's own instructions for that project. No submodule, no symbolic links: it
+     works on Windows without Developer Mode.
