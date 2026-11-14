@@ -24,9 +24,9 @@ building software with one, from requirements to maintenance.
   `way_of_working.md`, and [`claude/skills.md`](claude/skills.md), the library of review
   skills in regular use, read when the review skill links to it, not loaded in every
   conversation.
-- **Stands on its own:** installed once per user, so it applies in every project while
-  no project contains or mentions it; a project may still choose to carry it. The
-  steps are in [`claude/CLAUDE.md`](claude/CLAUDE.md).
+- **Stands on its own:** checked out under each project that uses it, while the
+  project's repository neither contains nor mentions it. The steps are in
+  [`claude/CLAUDE.md`](claude/CLAUDE.md).
 
 ## License
 
