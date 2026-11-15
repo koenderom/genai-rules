@@ -77,6 +77,11 @@ reader, not the assistant: this file isn't loaded with the rules.
 - **No global or shared mutable state:** Andrew Hunt and David Thomas, *The Pragmatic
   Programmer*, 20th anniversary edition (2019), tips 47 ("Avoid Global Data"), 48, 50
   ("Don't Hoard State; Pass It Around") and 57 ("Shared State Is Incorrect State").
+- **Standard formats:** the robustness principle (see "Architecture and design" above);
+  UTF-8: [RFC 3629](https://www.rfc-editor.org/rfc/rfc3629), and the
+  [WHATWG Encoding Standard](https://encoding.spec.whatwg.org/), which makes it the
+  encoding for the web; dates and times: ISO 8601, profiled in
+  [RFC 3339](https://www.rfc-editor.org/rfc/rfc3339).
 - **Fail fast:** also CPM principle 6 ("Fix problems early and at the source"). Jim Gray,
   "Why Do Computers Stop and What Can Be Done About It?" (1985), for systems; Jim Shore,
   ["Fail Fast"](https://martinfowler.com/ieeeSoftware/failFast.pdf), *IEEE Software*

@@ -111,9 +111,10 @@ proposal.
     into precise types once, where it enters; inside, a value that exists is valid: a
     status as one of its few allowed values (an enumeration), not any text; an email
     address as its own type, not a string checked again at every use.
-18. **Robustness principle (Postel's law), for input from outside:** be liberal in what you
-    accept from websites, feeds, files and users, conservative in what you produce.
-    Tolerated bad input is logged, never silently fixed or dropped.
+18. **Robustness principle (Postel's law):** be liberal in what you accept from websites,
+    feeds, files and users, conservative in what you produce. Tolerated bad input is
+    logged, never silently fixed or dropped. What the software produces follows the most
+    widely accepted standard format, so any receiver can read it.
 19. **Idempotence:** running the same operation twice gives the same result as once. A
     repeated run updates instead of duplicating, sends a notification once, and can be
     restarted safely after a failure partway.
