@@ -97,8 +97,11 @@ How every change is checked before it counts as done.
       kind of data as the program in use, so a pass means the real run works too.
 23. **A bug gets a failing test first:** reproduce it in a test that fails, then fix the
     code until the test passes. The test stays, so the same bug is found only once.
-24. **Every check runs automatically on every change, and gives the same result every
+24. **Test coverage is measured, and as high as possible:** how much of the code the
+    tests run, and, where the program can run on real data, how much a real run runs.
+    Code that neither runs gets a test, or is removed.
+25. **Every check runs automatically on every change, and gives the same result every
     time:** tests, linters and type checks run on every push (continuous integration), on
     each supported version of the language. Dependencies are pinned, so any run can be
     reproduced; no step depends on a manual procedure.
-25. **Done means implemented, tested, reviewed and documented.**
+26. **Done means implemented, tested, reviewed and documented.**
