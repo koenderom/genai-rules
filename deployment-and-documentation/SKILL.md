@@ -18,23 +18,26 @@ How changes are published, and how the project explains itself.
 4. **No repository goes public without a license chosen for it.** Without one, nobody
    may legally reuse it. The owner chooses the conditions (for example: free use, on the
    condition that the author is credited).
+5. **Every release has release notes:** what changed for the user, new settings with
+   their defaults, and every incompatible change with how to upgrade. No release without
+   them.
 
 ## Documentation
 
-5. **Written for its reader:** public documents address any user of the project, not the
+6. **Written for its reader:** public documents address any user of the project, not the
    owner; the owner's private notes don't speak of the owner in the third person.
-6. **Each thing is said once, in one place,** where its reader looks; other places link to
+7. **Each thing is said once, in one place,** where its reader looks; other places link to
    it. Two copies drift apart and end up contradicting each other. This holds for every
    kind of documentation: documents, docstrings, comments, help texts, example
    configuration.
-7. **Bullets over prose, short lines,** and the writing rules of `ai_chat_rules.md`.
-8. **No dates or names on rules.** The one exception: a measured number keeps the date it
+8. **Bullets over prose, short lines,** and the writing rules of `ai_chat_rules.md`.
+9. **No dates or names on rules.** The one exception: a measured number keeps the date it
    was measured on, next to it.
-9. **Instructions that were never tried are marked as such** (an untested platform, an
+10. **Instructions that were never tried are marked as such** (an untested platform, an
    unused feature).
-10. **A rule for one assistant's way of working stays out of the project's documents,**
+11. **A rule for one assistant's way of working stays out of the project's documents,**
     which every contributor reads.
-11. **No detail that an update makes obsolete:** no count of files, options, sources or
+12. **No detail that an update makes obsolete:** no count of files, options, sources or
     other things that change ("the four configuration files"), and no list that repeats
     what the code or a directory already shows. Name the thing, or link to where it's
     kept.
