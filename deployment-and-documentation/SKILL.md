@@ -19,8 +19,8 @@ How changes are published, and how the project explains itself.
    may legally reuse it. The owner chooses the conditions (for example: free use, on the
    condition that the author is credited).
 5. **Every release has release notes:** what changed for the user, new settings with
-   their defaults, and every incompatible change with how to upgrade. No release without
-   them.
+   their defaults, every incompatible change with how to upgrade, and the known
+   limitations and known bugs. No release without them.
 
 ## Documentation
 
