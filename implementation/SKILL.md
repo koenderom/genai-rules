@@ -122,15 +122,17 @@ before the design is approved").
 
 ## Changes and tests
 
-30. **One subject per change, in small steps.** Unrelated changes go in separate
+30. **A known bug is fixed before any new code is written** (planning rule 2): new
+    functions wait until the known bugs are gone.
+31. **One subject per change, in small steps.** Unrelated changes go in separate
     commits, so each is reviewed on its own. A change that needs another one merged first
     says so in its title ("merge after ...").
-31. **Code and its tests are written together.** Untested code doesn't exist: it gets
+32. **Code and its tests are written together.** Untested code doesn't exist: it gets
     tested (code that talks to an outside system: at least one real run) or removed.
     Unused code doesn't exist either: a new function is called in the same change.
-32. **One-off work isn't kept:** a data migration or repair runs once, as a script outside
+33. **One-off work isn't kept:** a data migration or repair runs once, as a script outside
     the repository; its code and tests don't stay.
-33. **A commit message says only what the code doesn't:** why the change was made, the
+34. **A commit message says only what the code doesn't:** why the change was made, the
     problem it solves or the function it improves, and how it relates to other changes.
     As short as it can be while still understood, and never longer than the change
     itself.
