@@ -13,3 +13,8 @@ How the code stays healthy as it changes.
    comment, a dead constant or a warning left in place makes the next one look normal.
 3. **New features and bug fixes don't increase complexity.** When one would, go back to
    architecture and design first, and refactor where needed, after the owner's approval.
+4. **Once published, stay backwards compatible:** interfaces, configuration files and
+   stored data keep their format unless a change truly needs another. Extending is fine;
+   a setting that's missing gets a sensible default, so an existing configuration keeps
+   working. When compatibility must break, the release notes say so and give a migration
+   guide that makes upgrading as easy as possible, preferably an automated migration.
