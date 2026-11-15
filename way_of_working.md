@@ -78,6 +78,9 @@ goes through seven stages, in this order; each stage has its own skill:
 - The rules stand on their own: they're the owner's way of working with an assistant,
   not part of any project. A project's repository doesn't contain them, and its code
   and documents (contributing rules included) don't depend on them or refer to them.
+- One exception: the coding rules a project follows are part of that project, as
+  guidelines its other contributors can read. They may copy the language guidelines
+  here, in part or in full; the copy stands on its own and doesn't refer to these rules.
 - They're checked out under each project, where the assistant looks for rules and
   skills, and kept out of the project's repository. The assistant's own folder says how
   (for Claude: [`claude/CLAUDE.md`](claude/CLAUDE.md)).
