@@ -58,6 +58,12 @@ goes through seven stages, in this order; each stage has its own skill:
     consistent.
 11. **Minimal diff:** a change touches only what it needs to, unless another rule asks for
     more: rule 5, or the boy-scout rule (maintenance rules).
+12. **Don't repeat yourself:** every piece of knowledge has one place where it's
+    stated, and every other place refers to it. In code, an operation is one function
+    (implementation rules); in configuration, a value is set once; in documents, each
+    thing is said once (documentation rules); a backlog item links to the rules instead
+    of repeating them (planning rules); a report links to a pull request instead of
+    restating it (review rules).
 
 ## The stage skills
 
