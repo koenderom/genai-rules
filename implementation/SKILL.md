@@ -104,27 +104,33 @@ before the design is approved").
     returns what it produces; values at module level are constants. State that really has
     to be shared (a cache, a connection) sits behind one small interface, never changed
     directly from several places.
+26. **Standard formats, named explicitly:** whatever a program writes (files, console,
+    logs, messages, data for other systems) names its format in the code and uses the
+    most widely accepted standard: e.g. UTF-8 for text, ISO 8601 for dates and times,
+    JSON or CSV for data. Never a platform's default (a system's encoding, locale or date
+    format): it differs from machine to machine. Another format only where the receiver
+    requires it.
 
 ## Errors
 
-26. **Fail fast:** report a problem where it happens, as early as possible, instead of
+27. **Fail fast:** report a problem where it happens, as early as possible, instead of
     continuing with bad data: a broken configuration stops the program before it starts
     working; an impossible value raises where it's found, not three calls later.
-27. **Catch specific errors, never all of them.**
-28. **For compiled code, warnings are errors:** the build treats every compiler warning as
+28. **Catch specific errors, never all of them.**
+29. **For compiled code, warnings are errors:** the build treats every compiler warning as
     an error, so none is left standing.
 
 ## Changes and tests
 
-29. **One subject per change, in small steps.** Unrelated changes go in separate
+30. **One subject per change, in small steps.** Unrelated changes go in separate
     commits, so each is reviewed on its own. A change that needs another one merged first
     says so in its title ("merge after ...").
-30. **Code and its tests are written together.** Untested code doesn't exist: it gets
+31. **Code and its tests are written together.** Untested code doesn't exist: it gets
     tested (code that talks to an outside system: at least one real run) or removed.
     Unused code doesn't exist either: a new function is called in the same change.
-31. **One-off work isn't kept:** a data migration or repair runs once, as a script outside
+32. **One-off work isn't kept:** a data migration or repair runs once, as a script outside
     the repository; its code and tests don't stay.
-32. **A commit message says only what the code doesn't:** why the change was made, the
+33. **A commit message says only what the code doesn't:** why the change was made, the
     problem it solves or the function it improves, and how it relates to other changes.
     As short as it can be while still understood, and never longer than the change
     itself.
