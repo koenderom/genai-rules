@@ -99,7 +99,9 @@ How every change is checked before it counts as done.
     code until the test passes. The test stays, so the same bug is found only once.
 24. **Test coverage is measured, and as high as possible:** how much of the code the
     tests run, and, where the program can run on real data, how much a real run runs.
-    Code that neither runs gets a test, or is removed.
+    Code that neither runs is looked at: code that guards against a rare failure (error
+    handling, a fail-safe) gets a test that causes that failure; code that nothing needs
+    is removed.
 25. **Every check runs automatically on every change, and gives the same result every
     time:** tests, linters and type checks run on every push (continuous integration), on
     each supported version of the language. Dependencies are pinned, so any run can be
