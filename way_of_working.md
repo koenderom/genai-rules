@@ -64,6 +64,11 @@ goes through seven stages, in this order; each stage has its own skill:
     thing is said once (documentation rules); a backlog item links to the rules instead
     of repeating them (planning rules); a report links to a pull request instead of
     restating it (review rules).
+13. **Every task ends with a check against its stage's rules:** before a task counts as
+    finished, every rule of its stage is checked. Tools do the checking wherever one can
+    (linters, type checkers, tests, scanners), run automatically; reasoning covers only
+    the rules no tool checks yet. A rule found broken is fixed before the task is
+    reported as done.
 
 ## The stage skills
 
